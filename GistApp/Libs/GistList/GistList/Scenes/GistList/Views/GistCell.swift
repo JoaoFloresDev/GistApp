@@ -20,12 +20,24 @@ enum Spaces: Double {
 
 struct GistCellModel {
     let userName: String?
-    let userImageUrl: String?
+    let userImageUrl: URL?
     let filesAmount: String?
 }
 
 class GistCell: UITableViewCell {
-    private let nameLabel: UILabel = {
+    // MARK: - Variables
+    private lazy var containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = Spaces.base02.value()
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.1
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+        view.layer.shadowRadius = 4
+        return view
+    }()
+    
+    private lazy var nameLabel: UILabel = {
         let nameLabel = UILabel()
         nameLabel.font = UIFont.boldSystemFont(
             ofSize: UIFont.preferredFont(forTextStyle: .subheadline).pointSize
@@ -34,14 +46,14 @@ class GistCell: UITableViewCell {
         return nameLabel
     }()
     
-    private let filesLabel: UILabel = {
+    private lazy var filesLabel: UILabel = {
         let filesLabel = UILabel()
         filesLabel.font = .preferredFont(forTextStyle: .body)
         filesLabel.numberOfLines = 0
         return filesLabel
     }()
     
-    private let avatarImageView: UIImageView = {
+    private lazy var avatarImageView: UIImageView = {
         let avatarImageView = UIImageView()
         avatarImageView.contentMode = .scaleToFill
         avatarImageView.layer.cornerRadius = Spaces.base03.value()
@@ -49,20 +61,37 @@ class GistCell: UITableViewCell {
         return avatarImageView
     }()
     
+    // MARK: - Initialization
     init(model: GistCellModel) {
         super.init(style: .default, reuseIdentifier: "\(type(of: self))")
-        setupViews()
         configure(with: model)
+        setupViewHierarchy()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupViews() {
-        contentView.addSubview(nameLabel)
-        contentView.addSubview(filesLabel)
-        contentView.addSubview(avatarImageView)
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        avatarImageView.image = nil
+        nameLabel.text = nil
+        filesLabel.text = nil
+    }
+    
+    // MARK: - Private Functions
+    private func setupViewHierarchy() {
+        contentView.addSubview(containerView)
+        containerView.addSubview(nameLabel)
+        containerView.addSubview(filesLabel)
+        containerView.addSubview(avatarImageView)
+    }
+    
+    private func setupConstraints() {
+        containerView.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(Spaces.base01.value())
+        }
         
         avatarImageView.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(Spaces.base02.value())
@@ -87,25 +116,19 @@ class GistCell: UITableViewCell {
     private func configure(with model: GistCellModel) {
         nameLabel.text = model.userName
         filesLabel.text = model.filesAmount
-        avatarImageView.image = nil
         
-        if let urlString = model.userImageUrl, let url = URL(string: urlString) {
-            fetchImage(from: url) { [weak self] image in
-                DispatchQueue.main.async {
-                    self?.avatarImageView.image = image
-                }
+        fetchImage(from: model.userImageUrl) { [weak self] image in
+            DispatchQueue.main.async {
+                self?.avatarImageView.image = image
             }
         }
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        avatarImageView.image = nil
-        nameLabel.text = nil
-        filesLabel.text = nil
-    }
-    
-    private func fetchImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+    private func fetchImage(from url: URL?, completion: @escaping (UIImage?) -> Void) {
+        guard let url = url else {
+            completion(nil)
+            return
+        }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil, let image = UIImage(data: data) else {
                 completion(nil)

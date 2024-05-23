@@ -23,9 +23,8 @@ public class GistListViewController: UIViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.estimatedRowHeight = 64
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.register(GistCell.self, forCellReuseIdentifier: "GistCell")
+        tableView.separatorStyle = .none
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
@@ -35,7 +34,7 @@ public class GistListViewController: UIViewController {
     private func fetchFruits() {
         DispatchQueue.global().async {
             sleep(1)
-            let fetchedFruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grapes"]
+            let fetchedFruits = ["Apple\n\naaa", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grapes"]
             DispatchQueue.main.async {
                 self.fruits = fetchedFruits
                 self.tableView.reloadData()
@@ -50,7 +49,7 @@ extension GistListViewController: UITableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = GistCellModel(userName: fruits[indexPath.row], userImageUrl: "https://avatars.githubusercontent.com/u/120196790?v=4", filesAmount: "filesAmount")
+        let model = GistCellModel(userName: fruits[indexPath.row], userImageUrl: URL(string: "https://avatars.githubusercontent.com/u/120196790?v=4"), filesAmount: "filesAmount")
         let cell = GistCell(model: model)
         return cell
     }
