@@ -15,8 +15,6 @@
 		73B83A962BFFAE5D00F5A61C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73B83A952BFFAE5D00F5A61C /* Assets.xcassets */; };
 		73B83A992BFFAE5D00F5A61C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B83A972BFFAE5D00F5A61C /* LaunchScreen.storyboard */; };
 		73B83AA42BFFAE5E00F5A61C /* GistAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83AA32BFFAE5E00F5A61C /* GistAppTests.swift */; };
-		73B83ADF2BFFB46F00F5A61C /* CoreApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B83ADE2BFFB46F00F5A61C /* CoreApi.framework */; };
-		73B83AE02BFFB46F00F5A61C /* CoreApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B83ADE2BFFB46F00F5A61C /* CoreApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9EE94902783427DBE34363D7 /* Pods_GistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C0B5AD5F145F8E75E73815 /* Pods_GistApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,20 +27,6 @@
 			remoteInfo = GistApp;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		73B83AE12BFFB46F00F5A61C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				73B83AE02BFFB46F00F5A61C /* CoreApi.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		192FB12DA99C61D0F8A7D97E /* Pods-GistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistApp.debug.xcconfig"; path = "Target Support Files/Pods-GistApp/Pods-GistApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B83ADF2BFFB46F00F5A61C /* CoreApi.framework in Frameworks */,
 				9EE94902783427DBE34363D7 /* Pods_GistApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,7 +143,6 @@
 				73B83A862BFFAE5A00F5A61C /* Frameworks */,
 				73B83A872BFFAE5A00F5A61C /* Resources */,
 				437A6C3A89858DB6779A8FC2 /* [CP] Embed Pods Frameworks */,
-				73B83AE12BFFB46F00F5A61C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

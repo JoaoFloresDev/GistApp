@@ -10,6 +10,11 @@
 		737AA45C2BFFBEF100274B72 /* GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4532BFFBEF100274B72 /* GistList.framework */; };
 		737AA4612BFFBEF100274B72 /* GistListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4602BFFBEF100274B72 /* GistListTests.swift */; };
 		737AA4622BFFBEF100274B72 /* GistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 737AA4562BFFBEF100274B72 /* GistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		737AA4782BFFC1B300274B72 /* GistDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4732BFFC1B300274B72 /* GistDetailsCoordinator.swift */; };
+		737AA4792BFFC1B300274B72 /* GistDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4742BFFC1B300274B72 /* GistDetailsService.swift */; };
+		737AA47A2BFFC1B300274B72 /* GistDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4752BFFC1B300274B72 /* GistDetailsPresenter.swift */; };
+		737AA47B2BFFC1B300274B72 /* GistDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4762BFFC1B300274B72 /* GistDetailsViewController.swift */; };
+		737AA47C2BFFC1B300274B72 /* GistDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4772BFFC1B300274B72 /* GistDetailsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,16 @@
 		737AA4562BFFBEF100274B72 /* GistList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GistList.h; sourceTree = "<group>"; };
 		737AA45B2BFFBEF100274B72 /* GistListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GistListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		737AA4602BFFBEF100274B72 /* GistListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListTests.swift; sourceTree = "<group>"; };
+		737AA46E2BFFC16400274B72 /* GistListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListPresenter.swift; sourceTree = "<group>"; };
+		737AA46F2BFFC16500274B72 /* GistListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListCoordinator.swift; sourceTree = "<group>"; };
+		737AA4702BFFC16500274B72 /* GistListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListInteractor.swift; sourceTree = "<group>"; };
+		737AA4712BFFC16500274B72 /* GistListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListService.swift; sourceTree = "<group>"; };
+		737AA4722BFFC16500274B72 /* GistListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewController.swift; sourceTree = "<group>"; };
+		737AA4732BFFC1B300274B72 /* GistDetailsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsCoordinator.swift; sourceTree = "<group>"; };
+		737AA4742BFFC1B300274B72 /* GistDetailsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsService.swift; sourceTree = "<group>"; };
+		737AA4752BFFC1B300274B72 /* GistDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsPresenter.swift; sourceTree = "<group>"; };
+		737AA4762BFFC1B300274B72 /* GistDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsViewController.swift; sourceTree = "<group>"; };
+		737AA4772BFFC1B300274B72 /* GistDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +110,11 @@
 		737AA46C2BFFBFD500274B72 /* GistList */ = {
 			isa = PBXGroup;
 			children = (
+				737AA46F2BFFC16500274B72 /* GistListCoordinator.swift */,
+				737AA4702BFFC16500274B72 /* GistListInteractor.swift */,
+				737AA46E2BFFC16400274B72 /* GistListPresenter.swift */,
+				737AA4712BFFC16500274B72 /* GistListService.swift */,
+				737AA4722BFFC16500274B72 /* GistListViewController.swift */,
 			);
 			path = GistList;
 			sourceTree = "<group>";
@@ -102,6 +122,11 @@
 		737AA46D2BFFBFEE00274B72 /* GistDetails */ = {
 			isa = PBXGroup;
 			children = (
+				737AA4732BFFC1B300274B72 /* GistDetailsCoordinator.swift */,
+				737AA4772BFFC1B300274B72 /* GistDetailsInteractor.swift */,
+				737AA4752BFFC1B300274B72 /* GistDetailsPresenter.swift */,
+				737AA4742BFFC1B300274B72 /* GistDetailsService.swift */,
+				737AA4762BFFC1B300274B72 /* GistDetailsViewController.swift */,
 			);
 			path = GistDetails;
 			sourceTree = "<group>";
@@ -168,6 +193,7 @@
 				TargetAttributes = {
 					737AA4522BFFBEF100274B72 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 					737AA45A2BFFBEF100274B72 = {
 						CreatedOnToolsVersion = 15.0;
@@ -215,6 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737AA47C2BFFC1B300274B72 /* GistDetailsInteractor.swift in Sources */,
+				737AA47A2BFFC1B300274B72 /* GistDetailsPresenter.swift in Sources */,
+				737AA4782BFFC1B300274B72 /* GistDetailsCoordinator.swift in Sources */,
+				737AA47B2BFFC1B300274B72 /* GistDetailsViewController.swift in Sources */,
+				737AA4792BFFC1B300274B72 /* GistDetailsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +396,7 @@
 		737AA4662BFFBEF100274B72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -388,6 +420,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -396,6 +429,7 @@
 		737AA4672BFFBEF100274B72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -427,6 +461,7 @@
 		737AA4692BFFBEF100274B72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NZC6LC8NWM;
@@ -443,6 +478,7 @@
 		737AA46A2BFFBEF100274B72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NZC6LC8NWM;
