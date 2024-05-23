@@ -10,8 +10,6 @@
 		3DDAF7C4FC687A840E8F9BE8 /* Pods_GistAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45886EDDE9D02CB1636CBB16 /* Pods_GistAppTests.framework */; };
 		73B83A8D2BFFAE5A00F5A61C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83A8C2BFFAE5A00F5A61C /* AppDelegate.swift */; };
 		73B83A8F2BFFAE5A00F5A61C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83A8E2BFFAE5A00F5A61C /* SceneDelegate.swift */; };
-		73B83A912BFFAE5A00F5A61C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83A902BFFAE5A00F5A61C /* ViewController.swift */; };
-		73B83A942BFFAE5A00F5A61C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B83A922BFFAE5A00F5A61C /* Main.storyboard */; };
 		73B83A962BFFAE5D00F5A61C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73B83A952BFFAE5D00F5A61C /* Assets.xcassets */; };
 		73B83A992BFFAE5D00F5A61C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B83A972BFFAE5D00F5A61C /* LaunchScreen.storyboard */; };
 		73B83AA42BFFAE5E00F5A61C /* GistAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83AA32BFFAE5E00F5A61C /* GistAppTests.swift */; };
@@ -37,8 +35,6 @@
 		73B83A892BFFAE5A00F5A61C /* GistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B83A8C2BFFAE5A00F5A61C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73B83A8E2BFFAE5A00F5A61C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		73B83A902BFFAE5A00F5A61C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		73B83A932BFFAE5A00F5A61C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73B83A952BFFAE5D00F5A61C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73B83A982BFFAE5D00F5A61C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73B83A9A2BFFAE5D00F5A61C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,8 +100,6 @@
 			children = (
 				73B83A8C2BFFAE5A00F5A61C /* AppDelegate.swift */,
 				73B83A8E2BFFAE5A00F5A61C /* SceneDelegate.swift */,
-				73B83A902BFFAE5A00F5A61C /* ViewController.swift */,
-				73B83A922BFFAE5A00F5A61C /* Main.storyboard */,
 				73B83A952BFFAE5D00F5A61C /* Assets.xcassets */,
 				73B83A972BFFAE5D00F5A61C /* LaunchScreen.storyboard */,
 				73B83A9A2BFFAE5D00F5A61C /* Info.plist */,
@@ -217,7 +211,6 @@
 			files = (
 				73B83A992BFFAE5D00F5A61C /* LaunchScreen.storyboard in Resources */,
 				73B83A962BFFAE5D00F5A61C /* Assets.xcassets in Resources */,
-				73B83A942BFFAE5A00F5A61C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +292,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B83A912BFFAE5A00F5A61C /* ViewController.swift in Sources */,
 				73B83A8D2BFFAE5A00F5A61C /* AppDelegate.swift in Sources */,
 				73B83A8F2BFFAE5A00F5A61C /* SceneDelegate.swift in Sources */,
 			);
@@ -324,14 +316,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		73B83A922BFFAE5A00F5A61C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				73B83A932BFFAE5A00F5A61C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		73B83A972BFFAE5D00F5A61C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -477,7 +461,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = GistApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -507,7 +490,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = GistApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
