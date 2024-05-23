@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import CoreApiInterface
 
-public struct RequestManager {
-    public static func makeRequest() {
+public struct RequestManager: RequestManagerProtocol {
+    public init() { }
+    public func makeRequest() {
         print("fazer request")
     }
 }

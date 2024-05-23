@@ -6,6 +6,7 @@
 //
 
 import CoreApi
+import CoreApiInterface
 import UIKit
 
 class ViewController: UIViewController {
@@ -13,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
-        RequestManager.makeRequest()
+        RequestManager().makeRequest()
     }
 }
 
