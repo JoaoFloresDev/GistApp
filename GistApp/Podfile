@@ -6,6 +6,8 @@ workspace 'GistApp.xcworkspace'
 target 'GistApp' do
   use_frameworks!
 
+  pod 'SnapKit'
+
   target 'GistAppTests' do
     inherit! :search_paths
     # Pods for testing
