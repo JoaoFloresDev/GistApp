@@ -169,7 +169,6 @@
 				73B83A852BFFAE5A00F5A61C /* Sources */,
 				73B83A862BFFAE5A00F5A61C /* Frameworks */,
 				73B83A872BFFAE5A00F5A61C /* Resources */,
-				437A6C3A89858DB6779A8FC2 /* [CP] Embed Pods Frameworks */,
 				737AA4932BFFD41C00274B72 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -258,23 +257,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		437A6C3A89858DB6779A8FC2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AE7328F176803C628FB00B58 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
