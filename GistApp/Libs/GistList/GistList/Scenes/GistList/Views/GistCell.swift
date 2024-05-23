@@ -2,6 +2,7 @@ import UIKit
 import SnapKit
 
 enum Spaces: Double {
+    case base00 = 4
     case base01 = 8
     case base02 = 16
     case base03 = 24
@@ -90,7 +91,8 @@ class GistCell: UITableViewCell {
     
     private func setupConstraints() {
         containerView.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(Spaces.base01.value())
+            $0.leading.trailing.equalToSuperview().inset(Spaces.base01.value())
+            $0.top.bottom.equalToSuperview().inset(Spaces.base00.value())
         }
         
         avatarImageView.snp.makeConstraints {
