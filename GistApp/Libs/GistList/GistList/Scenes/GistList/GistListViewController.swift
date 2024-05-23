@@ -1,10 +1,3 @@
-//
-//  GistListViewController.swift
-//  GistList
-//
-//  Created by Joao Victor Flores da Costa on 23/05/24.
-//
-
 import UIKit
 import SnapKit
 
@@ -30,7 +23,9 @@ public class GistListViewController: UIViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "FruitCell")
+        tableView.estimatedRowHeight = 64
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(GistCell.self, forCellReuseIdentifier: "GistCell")
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
@@ -38,10 +33,8 @@ public class GistListViewController: UIViewController {
     }
 
     private func fetchFruits() {
-        // Simulando uma chamada assíncrona
         DispatchQueue.global().async {
-            // Simulando um atraso de rede
-            sleep(2)
+            sleep(1)
             let fetchedFruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grapes"]
             DispatchQueue.main.async {
                 self.fruits = fetchedFruits
@@ -57,8 +50,11 @@ extension GistListViewController: UITableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FruitCell", for: indexPath)
-        cell.textLabel?.text = fruits[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GistCell", for: indexPath) as? GistCell else {
+            return UITableViewCell()
+        }
+        let model = GistCellModel(userName: fruits[indexPath.row], userImageUrl: nil, filesAmount: "filesAmount")
+        cell.configure(with: model)
         return cell
     }
 }
