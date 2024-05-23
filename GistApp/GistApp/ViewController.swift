@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  GistApp
-//
-//  Created by Joao Victor Flores da Costa on 23/05/24.
-//
-
 import CoreApi
 import CoreApiInterface
 import UIKit
