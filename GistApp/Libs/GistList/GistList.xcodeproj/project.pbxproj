@@ -23,6 +23,7 @@
 		737AA4862BFFC6B000274B72 /* GistListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA46E2BFFC16400274B72 /* GistListPresenter.swift */; };
 		737AA4872BFFC6B300274B72 /* GistListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4702BFFC16500274B72 /* GistListInteractor.swift */; };
 		737AA4882BFFC6B700274B72 /* GistListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA46F2BFFC16500274B72 /* GistListCoordinator.swift */; };
+		737AA48B2BFFD37300274B72 /* GistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA48A2BFFD37300274B72 /* GistCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		737AA47E2BFFC2F800274B72 /* GistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistModel.swift; sourceTree = "<group>"; };
 		737AA4802BFFC3DD00274B72 /* GistOwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistOwnerModel.swift; sourceTree = "<group>"; };
 		737AA4822BFFC41200274B72 /* GistFileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFileModel.swift; sourceTree = "<group>"; };
+		737AA48A2BFFD37300274B72 /* GistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistCell.swift; sourceTree = "<group>"; };
+		737AA49B2BFFD46000274B72 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,7 @@
 				737AA4552BFFBEF100274B72 /* GistList */,
 				737AA45F2BFFBEF100274B72 /* GistListTests */,
 				737AA4542BFFBEF100274B72 /* Products */,
+				737AA49A2BFFD46000274B72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,9 +99,9 @@
 		737AA4552BFFBEF100274B72 /* GistList */ = {
 			isa = PBXGroup;
 			children = (
+				737AA4562BFFBEF100274B72 /* GistList.h */,
 				737AA47D2BFFC2A700274B72 /* Models */,
 				737AA46B2BFFBFCD00274B72 /* Scenes */,
-				737AA4562BFFBEF100274B72 /* GistList.h */,
 			);
 			path = GistList;
 			sourceTree = "<group>";
@@ -127,6 +131,7 @@
 				737AA46E2BFFC16400274B72 /* GistListPresenter.swift */,
 				737AA4712BFFC16500274B72 /* GistListService.swift */,
 				737AA4722BFFC16500274B72 /* GistListViewController.swift */,
+				737AA4892BFFD34500274B72 /* Views */,
 			);
 			path = GistList;
 			sourceTree = "<group>";
@@ -151,6 +156,22 @@
 				737AA4822BFFC41200274B72 /* GistFileModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		737AA4892BFFD34500274B72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				737AA48A2BFFD37300274B72 /* GistCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		737AA49A2BFFD46000274B72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				737AA49B2BFFD46000274B72 /* SnapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737AA48B2BFFD37300274B72 /* GistCell.swift in Sources */,
 				737AA47F2BFFC2F800274B72 /* GistModel.swift in Sources */,
 				737AA4812BFFC3DD00274B72 /* GistOwnerModel.swift in Sources */,
 				737AA4862BFFC6B000274B72 /* GistListPresenter.swift in Sources */,

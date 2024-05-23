@@ -18,6 +18,6 @@ public class GistListViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .blue
     }
 }

@@ -18,7 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let controller = GistListViewController()
         window = UIWindow(windowScene: windowScene)
-        
         window?.rootViewController = controller
         window?.makeKeyAndVisible()
     }
