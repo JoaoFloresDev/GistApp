@@ -1,6 +1,23 @@
 import UIKit
 import SnapKit
 
+enum Spaces: Double {
+    case base01 = 8
+    case base02 = 16
+    case base03 = 24
+    case base04 = 32
+    case base05 = 40
+    case base06 = 48
+    case base07 = 56
+    case base08 = 64
+    case base09 = 72
+    case base10 = 80
+    
+    func value() -> Double {
+        return self.rawValue
+    }
+}
+
 struct GistCellModel {
     let userName: String?
     let userImageUrl: String?
@@ -10,30 +27,32 @@ struct GistCellModel {
 class GistCell: UITableViewCell {
     private let nameLabel: UILabel = {
         let nameLabel = UILabel()
-        nameLabel.font = .preferredFont(forTextStyle: .subheadline)
-        nameLabel.numberOfLines = 0 // Permite múltiplas linhas
+        nameLabel.font = UIFont.boldSystemFont(
+            ofSize: UIFont.preferredFont(forTextStyle: .subheadline).pointSize
+        )
+        nameLabel.numberOfLines = 0
         return nameLabel
     }()
     
     private let filesLabel: UILabel = {
         let filesLabel = UILabel()
         filesLabel.font = .preferredFont(forTextStyle: .body)
-        filesLabel.numberOfLines = 0 // Permite múltiplas linhas
+        filesLabel.numberOfLines = 0
         return filesLabel
     }()
     
     private let avatarImageView: UIImageView = {
         let avatarImageView = UIImageView()
         avatarImageView.contentMode = .scaleToFill
-        avatarImageView.layer.cornerRadius = 24
+        avatarImageView.layer.cornerRadius = Spaces.base03.value()
         avatarImageView.clipsToBounds = true
-        avatarImageView.backgroundColor = .red
         return avatarImageView
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    init(model: GistCellModel) {
+        super.init(style: .default, reuseIdentifier: "\(type(of: self))")
         setupViews()
+        configure(with: model)
     }
     
     required init?(coder: NSCoder) {
@@ -46,26 +65,26 @@ class GistCell: UITableViewCell {
         contentView.addSubview(avatarImageView)
         
         avatarImageView.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(16)
-            $0.top.equalToSuperview().offset(8)
-            $0.width.height.equalTo(48)
+            $0.leading.equalToSuperview().offset(Spaces.base02.value())
+            $0.top.equalToSuperview().offset(Spaces.base01.value())
+            $0.width.height.equalTo(Spaces.base06.value())
         }
         
         nameLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(8)
-            $0.leading.equalTo(avatarImageView.snp.trailing).offset(16)
-            $0.trailing.equalToSuperview().inset(16)
+            $0.top.equalToSuperview().offset(Spaces.base01.value())
+            $0.leading.equalTo(avatarImageView.snp.trailing).offset(Spaces.base02.value())
+            $0.trailing.equalToSuperview().inset(Spaces.base02.value())
         }
         
         filesLabel.snp.makeConstraints {
-            $0.top.equalTo(nameLabel.snp.bottom).offset(4)
-            $0.leading.equalTo(avatarImageView.snp.trailing).offset(16)
-            $0.trailing.equalToSuperview().inset(16)
-            $0.bottom.equalToSuperview().inset(8)
+            $0.top.equalTo(nameLabel.snp.bottom).offset(Spaces.base01.value())
+            $0.leading.equalTo(avatarImageView.snp.trailing).offset(Spaces.base02.value())
+            $0.trailing.equalToSuperview().inset(Spaces.base02.value())
+            $0.bottom.equalToSuperview().inset(Spaces.base01.value())
         }
     }
     
-    func configure(with model: GistCellModel) {
+    private func configure(with model: GistCellModel) {
         nameLabel.text = model.userName
         filesLabel.text = model.filesAmount
         avatarImageView.image = nil

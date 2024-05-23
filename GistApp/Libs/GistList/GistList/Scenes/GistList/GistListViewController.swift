@@ -50,11 +50,8 @@ extension GistListViewController: UITableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GistCell", for: indexPath) as? GistCell else {
-            return UITableViewCell()
-        }
-        let model = GistCellModel(userName: fruits[indexPath.row], userImageUrl: nil, filesAmount: "filesAmount")
-        cell.configure(with: model)
+        let model = GistCellModel(userName: fruits[indexPath.row], userImageUrl: "https://avatars.githubusercontent.com/u/120196790?v=4", filesAmount: "filesAmount")
+        let cell = GistCell(model: model)
         return cell
     }
 }
