@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3DDAF7C4FC687A840E8F9BE8 /* Pods_GistAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45886EDDE9D02CB1636CBB16 /* Pods_GistAppTests.framework */; };
+		737AA4912BFFD41B00274B72 /* GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4902BFFD41B00274B72 /* GistList.framework */; };
+		737AA4922BFFD41B00274B72 /* GistList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4902BFFD41B00274B72 /* GistList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		737AA4952BFFD44000274B72 /* CoreApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4942BFFD44000274B72 /* CoreApi.framework */; };
+		737AA4962BFFD44000274B72 /* CoreApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4942BFFD44000274B72 /* CoreApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		737AA4982BFFD44600274B72 /* CoreApiInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4972BFFD44600274B72 /* CoreApiInterface.framework */; };
+		737AA4992BFFD44600274B72 /* CoreApiInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4972BFFD44600274B72 /* CoreApiInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73B83A8D2BFFAE5A00F5A61C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83A8C2BFFAE5A00F5A61C /* AppDelegate.swift */; };
 		73B83A8F2BFFAE5A00F5A61C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83A8E2BFFAE5A00F5A61C /* SceneDelegate.swift */; };
-		73B83A912BFFAE5A00F5A61C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83A902BFFAE5A00F5A61C /* ViewController.swift */; };
-		73B83A942BFFAE5A00F5A61C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B83A922BFFAE5A00F5A61C /* Main.storyboard */; };
 		73B83A962BFFAE5D00F5A61C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73B83A952BFFAE5D00F5A61C /* Assets.xcassets */; };
 		73B83A992BFFAE5D00F5A61C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B83A972BFFAE5D00F5A61C /* LaunchScreen.storyboard */; };
 		73B83AA42BFFAE5E00F5A61C /* GistAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83AA32BFFAE5E00F5A61C /* GistAppTests.swift */; };
@@ -28,17 +32,35 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		737AA4932BFFD41C00274B72 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				737AA4962BFFD44000274B72 /* CoreApi.framework in Embed Frameworks */,
+				737AA4992BFFD44600274B72 /* CoreApiInterface.framework in Embed Frameworks */,
+				737AA4922BFFD41B00274B72 /* GistList.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		192FB12DA99C61D0F8A7D97E /* Pods-GistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistApp.debug.xcconfig"; path = "Target Support Files/Pods-GistApp/Pods-GistApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2317C395477237AEB18F937E /* Pods-GistAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GistAppTests/Pods-GistAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3FD7C081E1BD32B8EC3A6FAB /* Pods-GistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistApp.release.xcconfig"; path = "Target Support Files/Pods-GistApp/Pods-GistApp.release.xcconfig"; sourceTree = "<group>"; };
 		45886EDDE9D02CB1636CBB16 /* Pods_GistAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C0B5AD5F145F8E75E73815 /* Pods_GistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		737AA48C2BFFD40400274B72 /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		737AA4902BFFD41B00274B72 /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		737AA4942BFFD44000274B72 /* CoreApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		737AA4972BFFD44600274B72 /* CoreApiInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreApiInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B83A892BFFAE5A00F5A61C /* GistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B83A8C2BFFAE5A00F5A61C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73B83A8E2BFFAE5A00F5A61C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		73B83A902BFFAE5A00F5A61C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		73B83A932BFFAE5A00F5A61C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73B83A952BFFAE5D00F5A61C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73B83A982BFFAE5D00F5A61C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73B83A9A2BFFAE5D00F5A61C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +76,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EE94902783427DBE34363D7 /* Pods_GistApp.framework in Frameworks */,
+				737AA4912BFFD41B00274B72 /* GistList.framework in Frameworks */,
+				737AA4982BFFD44600274B72 /* CoreApiInterface.framework in Frameworks */,
+				737AA4952BFFD44000274B72 /* CoreApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +129,6 @@
 			children = (
 				73B83A8C2BFFAE5A00F5A61C /* AppDelegate.swift */,
 				73B83A8E2BFFAE5A00F5A61C /* SceneDelegate.swift */,
-				73B83A902BFFAE5A00F5A61C /* ViewController.swift */,
-				73B83A922BFFAE5A00F5A61C /* Main.storyboard */,
 				73B83A952BFFAE5D00F5A61C /* Assets.xcassets */,
 				73B83A972BFFAE5D00F5A61C /* LaunchScreen.storyboard */,
 				73B83A9A2BFFAE5D00F5A61C /* Info.plist */,
@@ -124,6 +147,10 @@
 		C070708EF6AD0CD1A04524FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				737AA4972BFFD44600274B72 /* CoreApiInterface.framework */,
+				737AA4942BFFD44000274B72 /* CoreApi.framework */,
+				737AA4902BFFD41B00274B72 /* GistList.framework */,
+				737AA48C2BFFD40400274B72 /* GistList.framework */,
 				73B83ADE2BFFB46F00F5A61C /* CoreApi.framework */,
 				49C0B5AD5F145F8E75E73815 /* Pods_GistApp.framework */,
 				45886EDDE9D02CB1636CBB16 /* Pods_GistAppTests.framework */,
@@ -142,7 +169,8 @@
 				73B83A852BFFAE5A00F5A61C /* Sources */,
 				73B83A862BFFAE5A00F5A61C /* Frameworks */,
 				73B83A872BFFAE5A00F5A61C /* Resources */,
-				437A6C3A89858DB6779A8FC2 /* [CP] Embed Pods Frameworks */,
+				737AA4932BFFD41C00274B72 /* Embed Frameworks */,
+				F3537B60E3C956F1381C3698 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,7 +245,6 @@
 			files = (
 				73B83A992BFFAE5D00F5A61C /* LaunchScreen.storyboard in Resources */,
 				73B83A962BFFAE5D00F5A61C /* Assets.xcassets in Resources */,
-				73B83A942BFFAE5A00F5A61C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,23 +258,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		437A6C3A89858DB6779A8FC2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AE7328F176803C628FB00B58 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,6 +278,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3537B60E3C956F1381C3698 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GistApp/Pods-GistApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FF2BF3396D9999D53EE6A4AE /* [CP] Check Pods Manifest.lock */ = {
@@ -299,7 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B83A912BFFAE5A00F5A61C /* ViewController.swift in Sources */,
 				73B83A8D2BFFAE5A00F5A61C /* AppDelegate.swift in Sources */,
 				73B83A8F2BFFAE5A00F5A61C /* SceneDelegate.swift in Sources */,
 			);
@@ -324,14 +350,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		73B83A922BFFAE5A00F5A61C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				73B83A932BFFAE5A00F5A61C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		73B83A972BFFAE5D00F5A61C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -477,7 +495,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = GistApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -507,7 +524,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = GistApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
