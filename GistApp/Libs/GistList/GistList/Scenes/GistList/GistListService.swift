@@ -21,7 +21,13 @@ class GistListService: GistListServiceProtocol {
     }
         
     func fetchData(completion: @escaping (Result<[GistModel], Error>) -> Void) {
-        dependencie.coreApi.makeRequest(properties: RequestProperties.gistsList(page: 0),responseType: [GistModel].self) { result in
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        dependencie.coreApi.makeRequest(
+            properties: RequestProperties.gistsList(page: 0),
+            decoder: decoder,
+            responseType: [GistModel].self
+        ) { result in
             completion(result)
         }
     }

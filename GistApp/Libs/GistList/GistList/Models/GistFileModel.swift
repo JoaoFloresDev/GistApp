@@ -13,10 +13,4 @@ struct GistFileModel: Decodable {
     let language: String?
     let rawUrl: String?
     let size: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case filename, type, language
-        case rawUrl = "raw_url"
-        case size
-    }
 }

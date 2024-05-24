@@ -7,10 +7,6 @@
 
 import Foundation
 
-public protocol CoreApiDependence {
-    var coreApi: ApiFactoring { get }
-}
-
 public protocol RequestPropertiesProtocol {
     var path: String { get }
     var method: String { get }
@@ -19,5 +15,9 @@ public protocol RequestPropertiesProtocol {
 }
 
 public protocol ApiFactoring {
-    func makeRequest<T: Decodable>(properties: RequestPropertiesProtocol, responseType: T.Type, completion: @escaping (Result<T, Error>) -> Void)
+    func makeRequest<T: Decodable>(properties: RequestPropertiesProtocol, decoder: JSONDecoder, responseType: T.Type, completion: @escaping (Result<T, Error>) -> Void)
+}
+
+public protocol CoreApiDependence {
+    var coreApi: ApiFactoring { get }
 }
