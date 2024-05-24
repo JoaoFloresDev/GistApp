@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1C31CE4876B387DEE7734408 /* Pods_GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1864BD2206BCB7CE76D5C2CB /* Pods_GistList.framework */; };
+		730626FC2C006A8D00282E81 /* GistDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730626FB2C006A8D00282E81 /* GistDetailsFactory.swift */; };
 		7349CE8E2C002C3A006F91DF /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7349CE8D2C002C3A006F91DF /* TableViewDataSource.swift */; };
 		7349CE902C002DC6006F91DF /* GistListViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7349CE8F2C002DC6006F91DF /* GistListViewFactory.swift */; };
 		737AA45C2BFFBEF100274B72 /* GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4532BFFBEF100274B72 /* GistList.framework */; };
 		737AA4612BFFBEF100274B72 /* GistListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4602BFFBEF100274B72 /* GistListTests.swift */; };
 		737AA4622BFFBEF100274B72 /* GistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 737AA4562BFFBEF100274B72 /* GistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		737AA4782BFFC1B300274B72 /* GistDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4732BFFC1B300274B72 /* GistDetailsCoordinator.swift */; };
-		737AA4792BFFC1B300274B72 /* GistDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4742BFFC1B300274B72 /* GistDetailsService.swift */; };
 		737AA47A2BFFC1B300274B72 /* GistDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4752BFFC1B300274B72 /* GistDetailsPresenter.swift */; };
 		737AA47B2BFFC1B300274B72 /* GistDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4762BFFC1B300274B72 /* GistDetailsViewController.swift */; };
 		737AA47C2BFFC1B300274B72 /* GistDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4772BFFC1B300274B72 /* GistDetailsInteractor.swift */; };
@@ -42,6 +41,7 @@
 /* Begin PBXFileReference section */
 		1864BD2206BCB7CE76D5C2CB /* Pods_GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B2765B2F330CD7F02B2E84 /* Pods-GistList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistList.release.xcconfig"; path = "Target Support Files/Pods-GistList/Pods-GistList.release.xcconfig"; sourceTree = "<group>"; };
+		730626FB2C006A8D00282E81 /* GistDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsFactory.swift; sourceTree = "<group>"; };
 		7349CE8D2C002C3A006F91DF /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		7349CE8F2C002DC6006F91DF /* GistListViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewFactory.swift; sourceTree = "<group>"; };
 		737AA4532BFFBEF100274B72 /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,8 +53,6 @@
 		737AA4702BFFC16500274B72 /* GistListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListInteractor.swift; sourceTree = "<group>"; };
 		737AA4712BFFC16500274B72 /* GistListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListService.swift; sourceTree = "<group>"; };
 		737AA4722BFFC16500274B72 /* GistListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewController.swift; sourceTree = "<group>"; };
-		737AA4732BFFC1B300274B72 /* GistDetailsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsCoordinator.swift; sourceTree = "<group>"; };
-		737AA4742BFFC1B300274B72 /* GistDetailsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsService.swift; sourceTree = "<group>"; };
 		737AA4752BFFC1B300274B72 /* GistDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsPresenter.swift; sourceTree = "<group>"; };
 		737AA4762BFFC1B300274B72 /* GistDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsViewController.swift; sourceTree = "<group>"; };
 		737AA4772BFFC1B300274B72 /* GistDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsInteractor.swift; sourceTree = "<group>"; };
@@ -150,10 +148,9 @@
 		737AA46D2BFFBFEE00274B72 /* GistDetails */ = {
 			isa = PBXGroup;
 			children = (
-				737AA4732BFFC1B300274B72 /* GistDetailsCoordinator.swift */,
+				730626FB2C006A8D00282E81 /* GistDetailsFactory.swift */,
 				737AA4772BFFC1B300274B72 /* GistDetailsInteractor.swift */,
 				737AA4752BFFC1B300274B72 /* GistDetailsPresenter.swift */,
-				737AA4742BFFC1B300274B72 /* GistDetailsService.swift */,
 				737AA4762BFFC1B300274B72 /* GistDetailsViewController.swift */,
 			);
 			path = GistDetails;
@@ -333,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				730626FC2C006A8D00282E81 /* GistDetailsFactory.swift in Sources */,
 				737AA48B2BFFD37300274B72 /* GistCell.swift in Sources */,
 				737AA47F2BFFC2F800274B72 /* GistModel.swift in Sources */,
 				737AA4812BFFC3DD00274B72 /* GistOwnerModel.swift in Sources */,
@@ -342,13 +340,11 @@
 				7349CE8E2C002C3A006F91DF /* TableViewDataSource.swift in Sources */,
 				737AA4872BFFC6B300274B72 /* GistListInteractor.swift in Sources */,
 				737AA47A2BFFC1B300274B72 /* GistDetailsPresenter.swift in Sources */,
-				737AA4782BFFC1B300274B72 /* GistDetailsCoordinator.swift in Sources */,
 				7349CE902C002DC6006F91DF /* GistListViewFactory.swift in Sources */,
 				737AA4852BFFC6AE00274B72 /* GistListService.swift in Sources */,
 				737AA47B2BFFC1B300274B72 /* GistDetailsViewController.swift in Sources */,
 				737AA4832BFFC41200274B72 /* GistFileModel.swift in Sources */,
 				737AA4882BFFC6B700274B72 /* GistListCoordinator.swift in Sources */,
-				737AA4792BFFC1B300274B72 /* GistDetailsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

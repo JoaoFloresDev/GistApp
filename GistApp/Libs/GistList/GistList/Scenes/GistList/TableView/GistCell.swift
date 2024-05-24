@@ -40,9 +40,7 @@ class GistCell: UITableViewCell {
     
     private lazy var nameLabel: UILabel = {
         let nameLabel = UILabel()
-        nameLabel.font = UIFont.boldSystemFont(
-            ofSize: UIFont.preferredFont(forTextStyle: .subheadline).pointSize
-        )
+        nameLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         nameLabel.numberOfLines = 0
         return nameLabel
     }()

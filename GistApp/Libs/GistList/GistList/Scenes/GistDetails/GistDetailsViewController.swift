@@ -43,7 +43,6 @@ public class GistDetailsViewController: UIViewController {
     init(interactor: GistDetailsInteractorProtocol) {
         self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
-        setupBackButton()
     }
     
     required public init?(coder: NSCoder) {
@@ -52,18 +51,11 @@ public class GistDetailsViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-//        interactor.populateGist()
-        displayGistDetail(data: .init(userName: "userName", userImageUrl: URL(string: "https://avatars.githubusercontent.com/u/194955?v=4")))
+        interactor.populateGistDetail()
         setupUI()
     }
     
     // MARK: - Private Functions
-    private func setupBackButton() {
-        let backItem = UIBarButtonItem()
-        backItem.title = "Voltar"
-        navigationItem.backBarButtonItem = backItem
-    }
-    
     private func setupUI() {
         title = "Gist Details"
         view.backgroundColor = .white

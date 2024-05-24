@@ -28,7 +28,7 @@ class GistListInteractor {
             GistCellModel(
                 userName: $0.owner?.login,
                 userImageUrl: $0.owner?.avatarUrl,
-                filesAmount: "\($0.files.count)")
+                filesAmount: "Files: \($0.files.count)")
         }
     }
 }

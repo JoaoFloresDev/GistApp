@@ -19,24 +19,23 @@ public class GistListViewController: UIViewController {
     var interactor: GistListInteractorProtocol
     
     // MARK: - Views
-    private lazy var loadingAlert: UIAlertController = {
-        let alert = UIAlertController(title: "", message: nil, preferredStyle: .alert)
+    private lazy var loadingView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(white: 0, alpha: 0.2)
+        view.layer.cornerRadius = 10
+        view.clipsToBounds = true
         
         let loadingIndicator = UIActivityIndicatorView(style: .large)
         loadingIndicator.startAnimating()
-        alert.view.addSubview(loadingIndicator)
         
-        loadingIndicator.snp.makeConstraints {
-            $0.center.equalToSuperview()
+        view.addSubview(loadingIndicator)
+        
+        loadingIndicator.snp.makeConstraints { make in
+            make.center.equalToSuperview()
         }
-        
-        alert.view.snp.makeConstraints {
-            $0.width.height.equalTo(80)
-        }
-        
-        return alert
+        view.isHidden = true
+        return view
     }()
-    
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -61,6 +60,7 @@ public class GistListViewController: UIViewController {
         super.viewDidLoad()
         interactor.populateGists()
         setupUI()
+        setupBackButton()
     }
     
     // MARK: - Private Functions
@@ -73,20 +73,31 @@ public class GistListViewController: UIViewController {
     
     private func setupViewHierarchy() {
         view.addSubview(tableView)
+        view.addSubview(loadingView)
     }
     
     private func setupConstraints() {
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
+        
+        loadingView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(100)
+        }
+    }
+    
+    private func setupBackButton() {
+        let backButton = UIBarButtonItem(title: "Voltar", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButton
     }
 }
 
 extension GistListViewController: GistListViewControllerProtocol {
     func displayGists(data: [GistCellModel]) {
+        dataSource.update(data: data)
         DispatchQueue.main.async { [weak self] in
-            self?.loadingAlert.dismiss(animated: true)
-            self?.dataSource.update(data: data)
+            self?.loadingView.isHidden = true
             self?.tableView.reloadData()
         }
     }
@@ -102,14 +113,13 @@ extension GistListViewController: GistListViewControllerProtocol {
         alert.addAction(action)
         
         DispatchQueue.main.async { [weak self] in
-            self?.loadingAlert.dismiss(animated: true) {
-                self?.present(alert, animated: true, completion: nil)
-            }
+            self?.loadingView.isHidden = true
+            self?.present(alert, animated: true, completion: nil)
         }
     }
     
     func displayLoading() {
-        present(loadingAlert, animated: true, completion: nil)
+        loadingView.isHidden = false
     }
 }
 

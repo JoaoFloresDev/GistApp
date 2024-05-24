@@ -16,7 +16,8 @@ class GistListCoordinator: GistListCoordinatorProtocol {
     weak var viewController: UIViewController?
     
     func openGistDetail(model: GistModel) {
-        let controller = GistDetailsViewController(interactor: GistDetailsInteractor())
+        
+        let controller = GistDetailsFactory.make(model: .init(userName: model.owner?.login, userImageUrl: model.owner?.avatarUrl))
         viewController?.navigationController?.pushViewController(controller, animated: true)
     }
 }

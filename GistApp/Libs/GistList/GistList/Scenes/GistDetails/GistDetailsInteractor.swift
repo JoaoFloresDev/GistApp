@@ -6,9 +6,22 @@
 //
 
 protocol GistDetailsInteractorProtocol {
-    
+    func populateGistDetail()
 }
 
 public class GistDetailsInteractor: GistDetailsInteractorProtocol {
+    var presenter: GistDetailsPresenterProtocol
+    var model: GistDetailModel
+        
+    init(
+        model: GistDetailModel,
+        presenter: GistDetailsPresenterProtocol
+    ) {
+        self.model = model
+        self.presenter = presenter
+    }
     
+    func populateGistDetail() {
+        presenter.presentGistDetail(data: model)
+    }
 }
