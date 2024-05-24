@@ -1,0 +1,6 @@
+"title" = "GistApp";
+"back" = "Voltar";
+"errorTitle" = "Ops, erro";
+"tryAgain" = "Tentar novamente";
+"emptyDataError" = "Dado vazio";
+"decodingError" = "Erro na decodificação";

@@ -53,11 +53,12 @@ class GistCell: UITableViewCell {
     }()
     
     private lazy var avatarImageView: UIImageView = {
-        let avatarImageView = UIImageView()
-        avatarImageView.contentMode = .scaleToFill
-        avatarImageView.layer.cornerRadius = Spaces.base03.value()
-        avatarImageView.clipsToBounds = true
-        return avatarImageView
+        let view = UIImageView()
+        view.contentMode = .scaleToFill
+        view.layer.cornerRadius = Spaces.base03.value()
+        view.clipsToBounds = true
+        view.backgroundColor = .lightGray
+        return view
     }()
     
     // MARK: - Initialization

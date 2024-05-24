@@ -65,7 +65,7 @@ public class GistListViewController: UIViewController {
     
     // MARK: - Private Functions
     private func setupUI() {
-        title = "GistApp"
+        title = NSLocalizedString("tryAgain", comment: "")
         view.backgroundColor = .white
         setupViewHierarchy()
         setupConstraints()

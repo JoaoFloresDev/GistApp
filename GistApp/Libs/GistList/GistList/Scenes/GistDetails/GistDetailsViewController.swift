@@ -25,6 +25,7 @@ public class GistDetailsViewController: UIViewController {
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.backgroundColor = .lightGray
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = Spaces.base01.value()
         imageView.clipsToBounds = true
