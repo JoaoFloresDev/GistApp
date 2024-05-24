@@ -17,10 +17,6 @@ class TableViewDataSource: TableViewDataSourceProtocol {
         self.data = data
     }
     
-    func getDataFor(index: Int) -> GistCellModel {
-        data[index]
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }

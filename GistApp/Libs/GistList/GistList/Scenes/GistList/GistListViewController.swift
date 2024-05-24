@@ -26,12 +26,12 @@ public class GistListViewController: UIViewController {
         loadingIndicator.startAnimating()
         alert.view.addSubview(loadingIndicator)
         
-        loadingIndicator.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        loadingIndicator.snp.makeConstraints {
+            $0.center.equalToSuperview()
         }
         
-        alert.view.snp.makeConstraints { make in
-            make.width.height.equalTo(80)
+        alert.view.snp.makeConstraints {
+            $0.width.height.equalTo(80)
         }
         
         return alert
@@ -59,7 +59,7 @@ public class GistListViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        interactor.viewDidLoad()
+        interactor.populateGists()
         setupUI()
     }
     
@@ -84,10 +84,10 @@ public class GistListViewController: UIViewController {
 
 extension GistListViewController: GistListViewControllerProtocol {
     func displayGists(data: [GistCellModel]) {
-        DispatchQueue.main.async {
-            self.loadingAlert.dismiss(animated: true)
-            self.dataSource.update(data: data)
-            self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.loadingAlert.dismiss(animated: true)
+            self?.dataSource.update(data: data)
+            self?.tableView.reloadData()
         }
     }
     
@@ -96,12 +96,16 @@ extension GistListViewController: GistListViewControllerProtocol {
         
         let buttonTitle = model.buttonText
         let action = UIAlertAction(title: buttonTitle, style: .default) { _ in
-            
+            self.interactor.populateGists()
             alert.dismiss(animated: true, completion: nil)
         }
         alert.addAction(action)
         
-        present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async { [weak self] in
+            self?.loadingAlert.dismiss(animated: true) {
+                self?.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     func displayLoading() {
@@ -112,10 +116,6 @@ extension GistListViewController: GistListViewControllerProtocol {
 extension GistListViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let fruit = dataSource.getDataFor(index: indexPath.row)
-        print("Selected fruit: \(fruit)")
-        let alert = UIAlertController(title: "Fruit Selected", message: "You selected \(fruit)", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        interactor.gistSelected(index: indexPath.row)
     }
 }

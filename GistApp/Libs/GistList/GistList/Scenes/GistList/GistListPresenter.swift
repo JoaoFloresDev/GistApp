@@ -10,6 +10,7 @@ protocol GistListPresenterProtocol {
     func presentGists(data: [GistCellModel])
     func presentLoading()
     func presentError(title: String, subtitle: String?, buttonText: String)
+    func presentGistDetail(model: GistModel)
 }
 
 class GistListPresenter {
@@ -24,6 +25,10 @@ class GistListPresenter {
 extension GistListPresenter: GistListPresenterProtocol {
     func presentGists(data: [GistCellModel]) {
         viewController?.displayGists(data: data)
+    }
+    
+    func presentGistDetail(model: GistModel) {
+        coordinator.openGistDetail(model: model)
     }
     
     func presentLoading() {

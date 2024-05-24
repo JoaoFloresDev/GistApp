@@ -6,12 +6,14 @@
 //
 
 protocol GistListInteractorProtocol {
-    func viewDidLoad()
+    func populateGists()
+    func gistSelected(index: Int)
 }
 
 class GistListInteractor {
     let service: GistListServiceProtocol
     let presenter: GistListPresenterProtocol
+    var model: [GistModel] = []
     
     init(
         service: GistListServiceProtocol,
@@ -32,11 +34,17 @@ class GistListInteractor {
 }
 
 extension GistListInteractor: GistListInteractorProtocol {
-    func viewDidLoad() {
+    func gistSelected(index: Int) {
+        presenter.presentGistDetail(model: model[index])
+    }
+    
+    func populateGists() {
         self.presenter.presentLoading()
+        
         service.fetchData { result in
             switch result {
             case .success(let model):
+                self.model = model
                 let gistModelCellArray = self.convertToGistCellModel(gistModel: model)
                 self.presenter.presentGists(data: gistModelCellArray)
                 
