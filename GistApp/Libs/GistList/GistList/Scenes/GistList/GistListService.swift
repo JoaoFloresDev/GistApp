@@ -5,6 +5,8 @@
 //  Created by Joao Victor Flores da Costa on 23/05/24.
 //
 
+import CoreApiInterface
+
 enum NetworkError: Error {
     case emptyData
     case decodingFailed
@@ -14,28 +16,7 @@ protocol GistListServiceProtocol {
     func fetchData(completion: @escaping (Result<[GistModel], Error>) -> Void)
 }
 
-protocol HasCoreApi {
-    var coreApi: ApiFactoring { get }
-}
-
-class ApiFactory: ApiFactoring {
-    func makeRequest() {
-        print("oi")
-    }
-}
-
-public protocol ApiFactoring {
-    func makeRequest()
-}
-
-typealias Dependencies = HasCoreApi
-public class BaseDependencieInjector: Dependencies {
-    public var coreApi: ApiFactoring
-
-    public init(coreApi: ApiFactoring) {
-        self.coreApi = coreApi
-    }
-}
+typealias Dependencies = CoreApiDependence
 
 class GistListService: GistListServiceProtocol {
     private let dependencie: Dependencies

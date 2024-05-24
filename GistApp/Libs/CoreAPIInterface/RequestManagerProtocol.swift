@@ -7,6 +7,10 @@
 
 import Foundation
 
-public protocol RequestManagerProtocol {
+public protocol CoreApiDependence {
+    var coreApi: ApiFactoring { get }
+}
+
+public protocol ApiFactoring {
     func makeRequest()
 }

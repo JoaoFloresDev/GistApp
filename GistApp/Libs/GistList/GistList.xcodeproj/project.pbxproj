@@ -45,6 +45,7 @@
 		730626FB2C006A8D00282E81 /* GistDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsFactory.swift; sourceTree = "<group>"; };
 		7306270A2C007CB400282E81 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7306270C2C007D1400282E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		731133B02C0120D300399764 /* CoreApiInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreApiInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7349CE8D2C002C3A006F91DF /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		7349CE8F2C002DC6006F91DF /* GistListViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewFactory.swift; sourceTree = "<group>"; };
 		737AA4532BFFBEF100274B72 /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +184,7 @@
 		737AA49A2BFFD46000274B72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				731133B02C0120D300399764 /* CoreApiInterface.framework */,
 				737AA49B2BFFD46000274B72 /* SnapKit.framework */,
 				1864BD2206BCB7CE76D5C2CB /* Pods_GistList.framework */,
 			);

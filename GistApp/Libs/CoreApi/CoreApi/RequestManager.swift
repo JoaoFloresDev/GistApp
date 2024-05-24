@@ -8,7 +8,7 @@
 import Foundation
 import CoreApiInterface
 
-public struct RequestManager: RequestManagerProtocol {
+public class ApiFactory: ApiFactoring {
     public init() { }
     public func makeRequest() {
         print("fazer request")

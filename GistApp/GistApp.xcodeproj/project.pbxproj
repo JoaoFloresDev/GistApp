@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3DDAF7C4FC687A840E8F9BE8 /* Pods_GistAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45886EDDE9D02CB1636CBB16 /* Pods_GistAppTests.framework */; };
+		731133B62C0123E900399764 /* DependencieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731133B52C0123E900399764 /* DependencieManager.swift */; };
 		737AA4912BFFD41B00274B72 /* GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4902BFFD41B00274B72 /* GistList.framework */; };
 		737AA4922BFFD41B00274B72 /* GistList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4902BFFD41B00274B72 /* GistList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		737AA4952BFFD44000274B72 /* CoreApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4942BFFD44000274B72 /* CoreApi.framework */; };
@@ -54,6 +55,7 @@
 		3FD7C081E1BD32B8EC3A6FAB /* Pods-GistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistApp.release.xcconfig"; path = "Target Support Files/Pods-GistApp/Pods-GistApp.release.xcconfig"; sourceTree = "<group>"; };
 		45886EDDE9D02CB1636CBB16 /* Pods_GistAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C0B5AD5F145F8E75E73815 /* Pods_GistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		731133B52C0123E900399764 /* DependencieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencieManager.swift; sourceTree = "<group>"; };
 		737AA48C2BFFD40400274B72 /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		737AA4902BFFD41B00274B72 /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		737AA4942BFFD44000274B72 /* CoreApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		731133B42C0123D100399764 /* DependencieHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				731133B52C0123E900399764 /* DependencieManager.swift */,
+			);
+			path = DependencieHandlers;
+			sourceTree = "<group>";
+		};
 		73B83A802BFFAE5A00F5A61C = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		73B83A8B2BFFAE5A00F5A61C /* GistApp */ = {
 			isa = PBXGroup;
 			children = (
+				731133B42C0123D100399764 /* DependencieHandlers */,
 				73B83A8C2BFFAE5A00F5A61C /* AppDelegate.swift */,
 				73B83A8E2BFFAE5A00F5A61C /* SceneDelegate.swift */,
 				73B83A952BFFAE5D00F5A61C /* Assets.xcassets */,
@@ -327,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73B83A8D2BFFAE5A00F5A61C /* AppDelegate.swift in Sources */,
+				731133B62C0123E900399764 /* DependencieManager.swift in Sources */,
 				73B83A8F2BFFAE5A00F5A61C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
