@@ -26,14 +26,14 @@ struct GistCellModel {
 }
 
 class GistCell: UITableViewCell {
-    // MARK: - Variables
+    // MARK: - Views
     private lazy var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = Spaces.base02.value()
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 0.1
-        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+        view.layer.shadowOffset = CGSize(width: .zero, height: 1)
         view.layer.shadowRadius = 4
         return view
     }()
