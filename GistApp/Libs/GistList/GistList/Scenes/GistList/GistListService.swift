@@ -7,11 +7,6 @@
 
 import CoreApiInterface
 
-enum NetworkError: Error {
-    case emptyData
-    case decodingFailed
-}
-
 protocol GistListServiceProtocol {
     func fetchData(completion: @escaping (Result<[GistModel], Error>) -> Void)
 }
@@ -26,28 +21,8 @@ class GistListService: GistListServiceProtocol {
     }
         
     func fetchData(completion: @escaping (Result<[GistModel], Error>) -> Void) {
-        dependencie.coreApi.makeRequest()
-        let url = URL(string: "https://api.github.com/gists/public?page=0")!
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(NetworkError.emptyData))
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                let gists = try decoder.decode([GistModel].self, from: data)
-                completion(.success(gists))
-            } catch {
-                completion(.failure(NetworkError.decodingFailed))
-            }
+        dependencie.coreApi.makeRequest(properties: RequestProperties.gistsList(page: 0),responseType: [GistModel].self) { result in
+            completion(result)
         }
-        
-        task.resume()
     }
 }

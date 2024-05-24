@@ -10,6 +10,8 @@
 		1C31CE4876B387DEE7734408 /* Pods_GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1864BD2206BCB7CE76D5C2CB /* Pods_GistList.framework */; };
 		730626FC2C006A8D00282E81 /* GistDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730626FB2C006A8D00282E81 /* GistDetailsFactory.swift */; };
 		7306270B2C007CB400282E81 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7306270A2C007CB400282E81 /* Localizable.strings */; };
+		731133B92C01441700399764 /* RequestProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731133B82C01441700399764 /* RequestProperties.swift */; };
+		731133BB2C01443900399764 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731133BA2C01443900399764 /* NetworkError.swift */; };
 		7349CE8E2C002C3A006F91DF /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7349CE8D2C002C3A006F91DF /* TableViewDataSource.swift */; };
 		7349CE902C002DC6006F91DF /* GistListViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7349CE8F2C002DC6006F91DF /* GistListViewFactory.swift */; };
 		737AA45C2BFFBEF100274B72 /* GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4532BFFBEF100274B72 /* GistList.framework */; };
@@ -46,6 +48,8 @@
 		7306270A2C007CB400282E81 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7306270C2C007D1400282E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		731133B02C0120D300399764 /* CoreApiInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreApiInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		731133B82C01441700399764 /* RequestProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProperties.swift; sourceTree = "<group>"; };
+		731133BA2C01443900399764 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		7349CE8D2C002C3A006F91DF /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		7349CE8F2C002DC6006F91DF /* GistListViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewFactory.swift; sourceTree = "<group>"; };
 		737AA4532BFFBEF100274B72 /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		731133B72C0143BB00399764 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				731133B82C01441700399764 /* RequestProperties.swift */,
+				731133BA2C01443900399764 /* NetworkError.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		737AA4492BFFBEF100274B72 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +126,7 @@
 			children = (
 				7306270C2C007D1400282E81 /* Info.plist */,
 				737AA4562BFFBEF100274B72 /* GistList.h */,
+				731133B72C0143BB00399764 /* Commons */,
 				737AA47D2BFFC2A700274B72 /* Models */,
 				737AA46B2BFFBFCD00274B72 /* Scenes */,
 				7306270A2C007CB400282E81 /* Localizable.strings */,
@@ -338,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				731133BB2C01443900399764 /* NetworkError.swift in Sources */,
 				730626FC2C006A8D00282E81 /* GistDetailsFactory.swift in Sources */,
 				737AA48B2BFFD37300274B72 /* GistCell.swift in Sources */,
 				737AA47F2BFFC2F800274B72 /* GistModel.swift in Sources */,
@@ -346,6 +361,7 @@
 				737AA4842BFFC6AB00274B72 /* GistListViewController.swift in Sources */,
 				737AA47C2BFFC1B300274B72 /* GistDetailsInteractor.swift in Sources */,
 				7349CE8E2C002C3A006F91DF /* TableViewDataSource.swift in Sources */,
+				731133B92C01441700399764 /* RequestProperties.swift in Sources */,
 				737AA4872BFFC6B300274B72 /* GistListInteractor.swift in Sources */,
 				737AA47A2BFFC1B300274B72 /* GistDetailsPresenter.swift in Sources */,
 				7349CE902C002DC6006F91DF /* GistListViewFactory.swift in Sources */,

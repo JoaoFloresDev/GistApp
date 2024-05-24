@@ -11,6 +11,13 @@ public protocol CoreApiDependence {
     var coreApi: ApiFactoring { get }
 }
 
+public protocol RequestPropertiesProtocol {
+    var path: String { get }
+    var method: String { get }
+    var parameters: [String : Any] { get }
+    var body: Data? { get }
+}
+
 public protocol ApiFactoring {
-    func makeRequest()
+    func makeRequest<T: Decodable>(properties: RequestPropertiesProtocol, responseType: T.Type, completion: @escaping (Result<T, Error>) -> Void)
 }
