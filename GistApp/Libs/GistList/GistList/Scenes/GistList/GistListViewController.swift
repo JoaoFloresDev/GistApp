@@ -1,7 +1,6 @@
 import UIKit
 import SnapKit
 
-
 public class GistListViewController: UIViewController {
     // MARK: - Variables
     private var dataSource = TableViewDataSource()
@@ -60,28 +59,6 @@ public class GistListViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
-    }
-}
-
-class TableViewDataSource: NSObject, UITableViewDataSource {
-    // MARK: - Variables
-    private var gistsArray: [GistCellModel] = []
-    
-    // MARK: - Internal Methods
-    func updateData(gistsArray: [GistCellModel]) {
-        self.gistsArray = gistsArray
-    }
-    
-    func getDataFor(index: Int) -> GistCellModel {
-        gistsArray[index]
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gistsArray.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        GistCell(model: gistsArray[indexPath.row])
     }
 }
 
