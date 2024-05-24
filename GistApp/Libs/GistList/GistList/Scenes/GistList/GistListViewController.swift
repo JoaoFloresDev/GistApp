@@ -7,7 +7,7 @@ struct ErrorModel {
     let buttonText: String
 }
 
-protocol GistListViewControllerProtocol {
+protocol GistListViewControllerProtocol: AnyObject {
     func displayGists(data: [GistCellModel])
     func displayError(model: ErrorModel)
     func displayLoading()
@@ -28,15 +28,11 @@ public class GistListViewController: UIViewController {
         
         loadingIndicator.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.width.height.equalTo(50)
         }
         
         alert.view.snp.makeConstraints { make in
             make.width.height.equalTo(80)
         }
-        
-        alert.view.backgroundColor = .clear
-        alert.view.layer.cornerRadius = 10
         
         return alert
     }()
@@ -48,7 +44,6 @@ public class GistListViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .yellow
         return tableView
     }()
 
@@ -64,15 +59,18 @@ public class GistListViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
-        title = "GistApp"
-        setupViewHierarchy()
-        setupConstraints()
-        fetchFruits()
-        displayLoading()
+        interactor.viewDidLoad()
+        setupUI()
     }
     
     // MARK: - Private Functions
+    private func setupUI() {
+        title = "GistApp"
+        view.backgroundColor = .white
+        setupViewHierarchy()
+        setupConstraints()
+    }
+    
     private func setupViewHierarchy() {
         view.addSubview(tableView)
     }
@@ -82,30 +80,12 @@ public class GistListViewController: UIViewController {
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }
-
-    private func fetchFruits() {
-        DispatchQueue.global().async {
-            sleep(1)
-            let gistArray: [GistCellModel] = [
-                .init(userName: "userName", userImageUrl: URL(string: "https://avatars.githubusercontent.com/u/120196790?v=4"), filesAmount: "filesAmount"),
-                .init(userName: "userName", userImageUrl: URL(string: "https://avatars.githubusercontent.com/u/120196790?v=4"), filesAmount: "filesAmount"),
-                .init(userName: "userName", userImageUrl: URL(string: "https://avatars.githubusercontent.com/u/120196790?v=4"), filesAmount: "filesAmount"),
-                .init(userName: "userName", userImageUrl: URL(string: "https://avatars.githubusercontent.com/u/120196790?v=4"), filesAmount: "filesAmount"),
-                .init(userName: "userName", userImageUrl: URL(string: "https://avatars.githubusercontent.com/u/120196790?v=4"), filesAmount: "filesAmount"),
-            ]
-            DispatchQueue.main.async {
-                self.dataSource.update(data: gistArray)
-                self.tableView.reloadData()
-            }
-        }
-    }
 }
 
 extension GistListViewController: GistListViewControllerProtocol {
     func displayGists(data: [GistCellModel]) {
-        loadingAlert.dismiss(animated: true)
-        
         DispatchQueue.main.async {
+            self.loadingAlert.dismiss(animated: true)
             self.dataSource.update(data: data)
             self.tableView.reloadData()
         }

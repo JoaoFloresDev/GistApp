@@ -6,12 +6,8 @@
 //
 
 import UIKit
-protocol TableDataProtocol {
-    func update(data: [GistCellModel])
-    func getDataFor(index: Int) -> GistCellModel
-}
 
-typealias TableViewDataSourceProtocol = NSObject & UITableViewDataSource & TableDataProtocol
+typealias TableViewDataSourceProtocol = NSObject & UITableViewDataSource
 class TableViewDataSource: TableViewDataSourceProtocol {
     // MARK: - Variables
     private var data: [GistCellModel] = []
