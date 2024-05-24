@@ -7,24 +7,21 @@
 
 import UIKit
 
-class TableViewDataSource: NSObject, UITableViewDataSource {
+typealias TableViewDataSourceProtocol = NSObject & UITableViewDataSource
+class TableViewDataSource: TableViewDataSourceProtocol {
     // MARK: - Variables
-    private var gistArray: [GistCellModel] = []
+    private var data: [GistCellModel] = []
     
     // MARK: - Internal Methods
-    func updateData(gistsArray: [GistCellModel]) {
-        self.gistArray = gistsArray
-    }
-    
-    func getDataFor(index: Int) -> GistCellModel {
-        gistArray[index]
+    func update(data: [GistCellModel]) {
+        self.data = data
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gistArray.count
+        return data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        GistCell(model: gistArray[indexPath.row])
+        GistCell(model: data[indexPath.row])
     }
 }

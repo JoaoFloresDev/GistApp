@@ -11,7 +11,7 @@ struct GistOwnerModel: Decodable {
     let login: String?
     let id: Int?
     let nodeId: String?
-    let avatarUrl: String?
+    let avatarUrl: URL?
     let gravatarId: String?
     let url: String?
     let htmlUrl: String?
