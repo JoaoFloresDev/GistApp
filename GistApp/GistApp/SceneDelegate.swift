@@ -11,12 +11,11 @@ import GistList
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        let controller = GistListFactory.make()
+        let dependencieContainer = DependencieContainer()
+        let controller = GistListFactory.make(dependencie: dependencieContainer)
         let navigation = UINavigationController(rootViewController: controller)
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigation

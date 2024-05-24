@@ -10,7 +10,7 @@
 		73B83ACF2BFFB3AA00F5A61C /* CoreApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B83AC62BFFB3A900F5A61C /* CoreApi.framework */; };
 		73B83AD42BFFB3AA00F5A61C /* CoreApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83AD32BFFB3AA00F5A61C /* CoreApiTests.swift */; };
 		73B83AD52BFFB3AA00F5A61C /* CoreApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B83AC92BFFB3A900F5A61C /* CoreApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B83AE32BFFB4E200F5A61C /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83AE22BFFB4E200F5A61C /* RequestManager.swift */; };
+		73B83AE32BFFB4E200F5A61C /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83AE22BFFB4E200F5A61C /* ApiFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,7 @@
 		73B83AC92BFFB3A900F5A61C /* CoreApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreApi.h; sourceTree = "<group>"; };
 		73B83ACE2BFFB3AA00F5A61C /* CoreApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B83AD32BFFB3AA00F5A61C /* CoreApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreApiTests.swift; sourceTree = "<group>"; };
-		73B83AE22BFFB4E200F5A61C /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		73B83AE22BFFB4E200F5A61C /* ApiFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				73B83AC92BFFB3A900F5A61C /* CoreApi.h */,
-				73B83AE22BFFB4E200F5A61C /* RequestManager.swift */,
+				73B83AE22BFFB4E200F5A61C /* ApiFactory.swift */,
 			);
 			path = CoreApi;
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B83AE32BFFB4E200F5A61C /* RequestManager.swift in Sources */,
+				73B83AE32BFFB4E200F5A61C /* ApiFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

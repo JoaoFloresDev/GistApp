@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import CoreApiInterface
 
-public enum GistListFactory {                                  
-    public static func make() -> UIViewController {
+public enum GistListFactory {
+    public static func make(dependencie: CoreApiDependence) -> UIViewController {
         var coordinator: GistListCoordinatorProtocol = GistListCoordinator()
-        let service: GistListServiceProtocol = GistListService(dependencie: BaseDependencieInjector(coreApi: ApiFactory()))
+        let service: GistListServiceProtocol = GistListService(dependencie: dependencie)
         var presenter: GistListPresenterProtocol = GistListPresenter(coordinator: coordinator)
         let interactor: GistListInteractorProtocol = GistListInteractor(service: service, presenter: presenter)
         let viewController = GistListViewController(interactor: interactor)
