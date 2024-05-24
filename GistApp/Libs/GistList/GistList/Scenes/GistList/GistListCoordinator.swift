@@ -16,8 +16,7 @@ class GistListCoordinator: GistListCoordinatorProtocol {
     weak var viewController: UIViewController?
     
     func openGistDetail(model: GistModel) {
-        let controller = UIViewController()
-        controller.view.backgroundColor = .yellow
-        viewController?.present(controller, animated: true)
+        let controller = GistDetailsViewController(interactor: GistDetailsInteractor())
+        viewController?.navigationController?.pushViewController(controller, animated: true)
     }
 }
