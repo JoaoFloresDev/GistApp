@@ -20,6 +20,15 @@ class GistListInteractor {
         self.service = service
         self.presenter = presenter
     }
+    
+    private func convertToGistCellModel(gistModel: [GistModel]) -> [GistCellModel] {
+        gistModel.map {
+            GistCellModel(
+                userName: $0.owner?.login,
+                userImageUrl: $0.owner?.avatarUrl,
+                filesAmount: "\($0.files.count)")
+        }
+    }
 }
 
 extension GistListInteractor: GistListInteractorProtocol {
@@ -28,13 +37,8 @@ extension GistListInteractor: GistListInteractorProtocol {
         service.fetchData { result in
             switch result {
             case .success(let model):
-                let modaa = model.map { gist in
-                    let userName = gist.owner?.login
-                    let userImageUrl = gist.owner?.avatarUrl
-                    let filesAmount = "\(gist.files.count)"
-                    return GistCellModel(userName: userName, userImageUrl: userImageUrl, filesAmount: filesAmount)
-                }
-                self.presenter.presentGists(data: modaa)
+                let gistModelCellArray = self.convertToGistCellModel(gistModel: model)
+                self.presenter.presentGists(data: gistModelCellArray)
                 
             case .failure(let error):
                 self.presenter.presentError(title: "Erro", subtitle: error.localizedDescription, buttonText: "Tentar novamente")
