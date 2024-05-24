@@ -6,25 +6,30 @@
 //
 
 import UIKit
+protocol TableDataProtocol {
+    func update(data: [GistCellModel])
+    func getDataFor(index: Int) -> GistCellModel
+}
 
-class TableViewDataSource: NSObject, UITableViewDataSource {
+typealias TableViewDataSourceProtocol = NSObject & UITableViewDataSource & TableDataProtocol
+class TableViewDataSource: TableViewDataSourceProtocol {
     // MARK: - Variables
-    private var gistArray: [GistCellModel] = []
+    private var data: [GistCellModel] = []
     
     // MARK: - Internal Methods
-    func updateData(gistsArray: [GistCellModel]) {
-        self.gistArray = gistsArray
+    func update(data: [GistCellModel]) {
+        self.data = data
     }
     
     func getDataFor(index: Int) -> GistCellModel {
-        gistArray[index]
+        data[index]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gistArray.count
+        return data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        GistCell(model: gistArray[indexPath.row])
+        GistCell(model: data[indexPath.row])
     }
 }

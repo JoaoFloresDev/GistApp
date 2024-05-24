@@ -1,16 +1,47 @@
 import UIKit
 import SnapKit
 
-protocol GistListViewControllerProtocol {
-    
+struct ErrorModel {
+    let title: String
+    let subtitle: String?
+    let buttonText: String
 }
 
-public class GistListViewController: UIViewController, GistListViewControllerProtocol {
+protocol GistListViewControllerProtocol {
+    func displayGists(data: [GistCellModel])
+    func displayError(model: ErrorModel)
+    func displayLoading()
+}
+
+public class GistListViewController: UIViewController {
     // MARK: - Variables
     private var dataSource = TableViewDataSource()
     var interactor: GistListInteractorProtocol
     
     // MARK: - Views
+    private lazy var loadingAlert: UIAlertController = {
+        let alert = UIAlertController(title: "", message: nil, preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(style: .large)
+        loadingIndicator.startAnimating()
+        alert.view.addSubview(loadingIndicator)
+        
+        loadingIndicator.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(50)
+        }
+        
+        alert.view.snp.makeConstraints { make in
+            make.width.height.equalTo(80)
+        }
+        
+        alert.view.backgroundColor = .clear
+        alert.view.layer.cornerRadius = 10
+        
+        return alert
+    }()
+    
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = dataSource
@@ -38,6 +69,7 @@ public class GistListViewController: UIViewController, GistListViewControllerPro
         setupViewHierarchy()
         setupConstraints()
         fetchFruits()
+        displayLoading()
     }
     
     // MARK: - Private Functions
@@ -62,10 +94,38 @@ public class GistListViewController: UIViewController, GistListViewControllerPro
                 .init(userName: "userName", userImageUrl: URL(string: "https://avatars.githubusercontent.com/u/120196790?v=4"), filesAmount: "filesAmount"),
             ]
             DispatchQueue.main.async {
-                self.dataSource.updateData(gistsArray: gistArray)
+                self.dataSource.update(data: gistArray)
                 self.tableView.reloadData()
             }
         }
+    }
+}
+
+extension GistListViewController: GistListViewControllerProtocol {
+    func displayGists(data: [GistCellModel]) {
+        loadingAlert.dismiss(animated: true)
+        
+        DispatchQueue.main.async {
+            self.dataSource.update(data: data)
+            self.tableView.reloadData()
+        }
+    }
+    
+    func displayError(model: ErrorModel) {
+        let alert = UIAlertController(title: model.title, message: model.subtitle, preferredStyle: .alert)
+        
+        let buttonTitle = model.buttonText
+        let action = UIAlertAction(title: buttonTitle, style: .default) { _ in
+            
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func displayLoading() {
+        present(loadingAlert, animated: true, completion: nil)
     }
 }
 
