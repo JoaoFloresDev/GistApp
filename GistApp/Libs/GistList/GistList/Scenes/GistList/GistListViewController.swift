@@ -1,9 +1,14 @@
 import UIKit
 import SnapKit
 
-public class GistListViewController: UIViewController {
+protocol GistListViewControllerProtocol {
+    
+}
+
+public class GistListViewController: UIViewController, GistListViewControllerProtocol {
     // MARK: - Variables
     private var dataSource = TableViewDataSource()
+    var interactor: GistListInteractorProtocol
     
     // MARK: - Views
     private lazy var tableView: UITableView = {
@@ -12,11 +17,13 @@ public class GistListViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .yellow
         return tableView
     }()
 
     // MARK: - Initialization
-    public init() {
+    init(interactor: GistListInteractorProtocol) {
+        self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,7 +33,7 @@ public class GistListViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .blue
         title = "GistApp"
         setupViewHierarchy()
         setupConstraints()
