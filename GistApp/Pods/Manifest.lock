@@ -1,20 +1,16 @@
 PODS:
-  - Mirror (0.2.3)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
-  - Mirror
-  - SnapKit
+  - SnapKit (~> 5.0)
 
 SPEC REPOS:
   trunk:
-    - Mirror
     - SnapKit
 
 SPEC CHECKSUMS:
-  Mirror: b855e09b83e0d10fd751dcffb60986f78a035afa
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 29c37c8ccdc5427fd6fae7204eb2b358608f43f6
+PODFILE CHECKSUM: 48ef915c04a1391d8fad11f2e5b0deeb73f5c997
 
 COCOAPODS: 1.13.0
