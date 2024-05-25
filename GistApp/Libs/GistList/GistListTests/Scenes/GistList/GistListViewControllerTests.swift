@@ -4,8 +4,8 @@ import XCTest
 @testable import GistList
 
 class GistListViewControllerTests: XCTestCase {
-    var viewController: GistListViewController!
-    var mockInteractor: MockGistListInteractor!
+    var viewController: GistListViewControllerProtocol = GistListViewController(interactor: mockInteractor)
+    var mockInteractor: GistListInteractorProtocol = MockGistListInteractor()
     
     override func setUp() {
         super.setUp()
@@ -25,6 +25,7 @@ class GistListViewControllerTests: XCTestCase {
     }
     
     func testDisplayGists() {
+        viewController = GistListViewController()
         let gists = [GistCellModel(userName: "User1", userImageUrl: nil, filesAmount: "5 files")]
         viewController.displayGists(data: gists)
         let mirror = Mirror(reflecting: viewController)
