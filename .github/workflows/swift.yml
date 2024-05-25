@@ -17,7 +17,7 @@ jobs:
     - name: Set up Ruby environment
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.7'
+        ruby-version: '2.7' # Ajuste para a versão do Ruby que você precisa
         bundler-cache: true
 
     - name: Install dependencies
@@ -29,11 +29,12 @@ jobs:
     - name: Set up Xcode
       uses: maxim-lobanov/setup-xcode@v1
       with:
-        xcode-version: '14.3.1'
+        xcode-version: '15.0.1' # Ajuste para a versão do Xcode que você precisa
 
     - name: Build
       run: xcodebuild -workspace GistApp.xcworkspace -scheme GistApp -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13,OS=latest' build -allowProvisioningUpdates
+      working-directory: ./GistApp # Defina o diretório de trabalho correto
 
     - name: Run tests
       run: xcodebuild -workspace GistApp.xcworkspace -scheme GistApp -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13,OS=latest' test -allowProvisioningUpdates
-
+      working-directory: ./GistApp # Defina o diretório de trabalho correto
