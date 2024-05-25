@@ -1,5 +1,5 @@
 import XCTest
-@testable import GistApp
+@testable import GistList
 
 class GistListViewControllerTests: XCTestCase {
     var viewController: GistListViewController!

@@ -21,4 +21,10 @@ target 'GistList' do
 
   # Pods for GistList
   pod 'SnapKit'
+
+  target 'GistListTests' do
+    inherit! :search_paths
+    # Pods for testing GistList
+    pod 'Mirror'
+  end
 end
