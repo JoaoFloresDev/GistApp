@@ -13,7 +13,17 @@
 		731133B92C01441700399764 /* RequestProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731133B82C01441700399764 /* RequestProperties.swift */; };
 		731133BB2C01443900399764 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731133BA2C01443900399764 /* NetworkError.swift */; };
 		7349CE8E2C002C3A006F91DF /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7349CE8D2C002C3A006F91DF /* TableViewDataSource.swift */; };
-		7349CE902C002DC6006F91DF /* GistListViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7349CE8F2C002DC6006F91DF /* GistListViewFactory.swift */; };
+		7349CE902C002DC6006F91DF /* GistListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7349CE8F2C002DC6006F91DF /* GistListFactory.swift */; };
+		7368EBC92C018B7B00DD2846 /* GistDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368EBC82C018B7B00DD2846 /* GistDetailsInteractorTests.swift */; };
+		7368EBCB2C018B8400DD2846 /* GistDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368EBCA2C018B8400DD2846 /* GistDetailsPresenterTests.swift */; };
+		7368EBCD2C018B9400DD2846 /* GistDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368EBCC2C018B9400DD2846 /* GistDetailsViewControllerTests.swift */; };
+		7368EBCF2C018B9E00DD2846 /* GistDetailsFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368EBCE2C018B9E00DD2846 /* GistDetailsFactoryTests.swift */; };
+		7368EBD12C018BD100DD2846 /* GistListFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368EBD02C018BD100DD2846 /* GistListFactoryTests.swift */; };
+		7368EBD32C018BD900DD2846 /* GistListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368EBD22C018BD900DD2846 /* GistListCoordinatorTests.swift */; };
+		7368EBD52C018BE500DD2846 /* GistListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368EBD42C018BE500DD2846 /* GistListInteractorTests.swift */; };
+		7368EBD72C018BF000DD2846 /* GistListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368EBD62C018BF000DD2846 /* GistListPresenterTests.swift */; };
+		7368EBD92C018BF900DD2846 /* GistListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368EBD82C018BF900DD2846 /* GistListServiceTests.swift */; };
+		7368EBDB2C018C0400DD2846 /* GistListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7368EBDA2C018C0400DD2846 /* GistListViewControllerTests.swift */; };
 		737AA45C2BFFBEF100274B72 /* GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737AA4532BFFBEF100274B72 /* GistList.framework */; };
 		737AA4612BFFBEF100274B72 /* GistListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AA4602BFFBEF100274B72 /* GistListTests.swift */; };
 		737AA4622BFFBEF100274B72 /* GistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 737AA4562BFFBEF100274B72 /* GistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,7 +61,17 @@
 		731133B82C01441700399764 /* RequestProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProperties.swift; sourceTree = "<group>"; };
 		731133BA2C01443900399764 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		7349CE8D2C002C3A006F91DF /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
-		7349CE8F2C002DC6006F91DF /* GistListViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewFactory.swift; sourceTree = "<group>"; };
+		7349CE8F2C002DC6006F91DF /* GistListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListFactory.swift; sourceTree = "<group>"; };
+		7368EBC82C018B7B00DD2846 /* GistDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsInteractorTests.swift; sourceTree = "<group>"; };
+		7368EBCA2C018B8400DD2846 /* GistDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		7368EBCC2C018B9400DD2846 /* GistDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		7368EBCE2C018B9E00DD2846 /* GistDetailsFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsFactoryTests.swift; sourceTree = "<group>"; };
+		7368EBD02C018BD100DD2846 /* GistListFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListFactoryTests.swift; sourceTree = "<group>"; };
+		7368EBD22C018BD900DD2846 /* GistListCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListCoordinatorTests.swift; sourceTree = "<group>"; };
+		7368EBD42C018BE500DD2846 /* GistListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListInteractorTests.swift; sourceTree = "<group>"; };
+		7368EBD62C018BF000DD2846 /* GistListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListPresenterTests.swift; sourceTree = "<group>"; };
+		7368EBD82C018BF900DD2846 /* GistListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListServiceTests.swift; sourceTree = "<group>"; };
+		7368EBDA2C018C0400DD2846 /* GistListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewControllerTests.swift; sourceTree = "<group>"; };
 		737AA4532BFFBEF100274B72 /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		737AA4562BFFBEF100274B72 /* GistList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GistList.h; sourceTree = "<group>"; };
 		737AA45B2BFFBEF100274B72 /* GistListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GistListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +121,39 @@
 			path = Commons;
 			sourceTree = "<group>";
 		};
+		7368EBC52C018AC300DD2846 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7368EBC72C018B5500DD2846 /* GistDetails */,
+				7368EBC62C018B4D00DD2846 /* GistList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7368EBC62C018B4D00DD2846 /* GistList */ = {
+			isa = PBXGroup;
+			children = (
+				7368EBD02C018BD100DD2846 /* GistListFactoryTests.swift */,
+				7368EBD22C018BD900DD2846 /* GistListCoordinatorTests.swift */,
+				7368EBD42C018BE500DD2846 /* GistListInteractorTests.swift */,
+				7368EBD62C018BF000DD2846 /* GistListPresenterTests.swift */,
+				7368EBD82C018BF900DD2846 /* GistListServiceTests.swift */,
+				7368EBDA2C018C0400DD2846 /* GistListViewControllerTests.swift */,
+			);
+			path = GistList;
+			sourceTree = "<group>";
+		};
+		7368EBC72C018B5500DD2846 /* GistDetails */ = {
+			isa = PBXGroup;
+			children = (
+				7368EBC82C018B7B00DD2846 /* GistDetailsInteractorTests.swift */,
+				7368EBCA2C018B8400DD2846 /* GistDetailsPresenterTests.swift */,
+				7368EBCC2C018B9400DD2846 /* GistDetailsViewControllerTests.swift */,
+				7368EBCE2C018B9E00DD2846 /* GistDetailsFactoryTests.swift */,
+			);
+			path = GistDetails;
+			sourceTree = "<group>";
+		};
 		737AA4492BFFBEF100274B72 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +190,7 @@
 		737AA45F2BFFBEF100274B72 /* GistListTests */ = {
 			isa = PBXGroup;
 			children = (
+				7368EBC52C018AC300DD2846 /* Scenes */,
 				737AA4602BFFBEF100274B72 /* GistListTests.swift */,
 			);
 			path = GistListTests;
@@ -154,7 +208,7 @@
 		737AA46C2BFFBFD500274B72 /* GistList */ = {
 			isa = PBXGroup;
 			children = (
-				7349CE8F2C002DC6006F91DF /* GistListViewFactory.swift */,
+				7349CE8F2C002DC6006F91DF /* GistListFactory.swift */,
 				737AA46F2BFFC16500274B72 /* GistListCoordinator.swift */,
 				737AA4702BFFC16500274B72 /* GistListInteractor.swift */,
 				737AA46E2BFFC16400274B72 /* GistListPresenter.swift */,
@@ -364,7 +418,7 @@
 				731133B92C01441700399764 /* RequestProperties.swift in Sources */,
 				737AA4872BFFC6B300274B72 /* GistListInteractor.swift in Sources */,
 				737AA47A2BFFC1B300274B72 /* GistDetailsPresenter.swift in Sources */,
-				7349CE902C002DC6006F91DF /* GistListViewFactory.swift in Sources */,
+				7349CE902C002DC6006F91DF /* GistListFactory.swift in Sources */,
 				737AA4852BFFC6AE00274B72 /* GistListService.swift in Sources */,
 				737AA47B2BFFC1B300274B72 /* GistDetailsViewController.swift in Sources */,
 				737AA4832BFFC41200274B72 /* GistFileModel.swift in Sources */,
@@ -376,6 +430,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7368EBD72C018BF000DD2846 /* GistListPresenterTests.swift in Sources */,
+				7368EBDB2C018C0400DD2846 /* GistListViewControllerTests.swift in Sources */,
+				7368EBC92C018B7B00DD2846 /* GistDetailsInteractorTests.swift in Sources */,
+				7368EBD52C018BE500DD2846 /* GistListInteractorTests.swift in Sources */,
+				7368EBCB2C018B8400DD2846 /* GistDetailsPresenterTests.swift in Sources */,
+				7368EBD92C018BF900DD2846 /* GistListServiceTests.swift in Sources */,
+				7368EBCF2C018B9E00DD2846 /* GistDetailsFactoryTests.swift in Sources */,
+				7368EBD32C018BD900DD2846 /* GistListCoordinatorTests.swift in Sources */,
+				7368EBD12C018BD100DD2846 /* GistListFactoryTests.swift in Sources */,
+				7368EBCD2C018B9400DD2846 /* GistDetailsViewControllerTests.swift in Sources */,
 				737AA4612BFFBEF100274B72 /* GistListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
