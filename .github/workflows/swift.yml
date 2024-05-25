@@ -23,6 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         gem install cocoapods
+        cd GistApp # Acesse o diretório correto onde o Podfile está localizado
         pod install
 
     - name: Set up Xcode
@@ -32,6 +33,8 @@ jobs:
 
     - name: Build
       run: xcodebuild -workspace GistApp.xcworkspace -scheme GistApp -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13,OS=latest' build
+      working-directory: ./GistApp # Defina o diretório de trabalho correto
 
     - name: Run tests
       run: xcodebuild -workspace GistApp.xcworkspace -scheme GistApp -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13,OS=latest' test
+      working-directory: ./GistApp # Defina o diretório de trabalho correto
