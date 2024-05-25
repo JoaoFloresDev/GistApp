@@ -41,7 +41,7 @@ extension GistListInteractor: GistListInteractorProtocol {
     func populateGists() {
         self.presenter.presentLoading()
         
-        service.fetchData { result in
+        service.fetchData(index: .zero) { result in
             switch result {
             case .success(let model):
                 self.model = model

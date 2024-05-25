@@ -8,7 +8,7 @@
 import CoreApiInterface
 
 protocol GistListServiceProtocol {
-    func fetchData(completion: @escaping (Result<[GistModel], Error>) -> Void)
+    func fetchData(index: Int, completion: @escaping (Result<[GistModel], Error>) -> Void)
 }
 
 typealias Dependencies = CoreApiDependence
@@ -20,7 +20,7 @@ class GistListService: GistListServiceProtocol {
         self.dependencie = dependencie
     }
         
-    func fetchData(completion: @escaping (Result<[GistModel], Error>) -> Void) {
+    func fetchData(index: Int, completion: @escaping (Result<[GistModel], Error>) -> Void) {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         dependencie.coreApi.makeRequest(
