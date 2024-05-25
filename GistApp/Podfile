@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '17.0'
+platform :ios, '16.0'
 
 workspace 'GistApp.xcworkspace'
 
@@ -21,4 +21,10 @@ target 'GistList' do
 
   # Pods for GistList
   pod 'SnapKit'
+
+  target 'GistListTests' do
+    inherit! :search_paths
+    # Pods for testing GistList
+    pod 'Mirror'
+  end
 end
