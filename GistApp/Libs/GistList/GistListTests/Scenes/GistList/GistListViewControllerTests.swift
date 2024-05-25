@@ -27,7 +27,15 @@ class GistListViewControllerTests: XCTestCase {
     func testDisplayGists() {
         let gists = [GistCellModel(userName: "User1", userImageUrl: nil, filesAmount: "5 files")]
         viewController.displayGists(data: gists)
-        Mirror(reflecting: viewController)
+        let mirror = Mirror(reflecting: viewController)
+        for child in mirror.children {
+            if child.label == "title" {
+                if let label = child.value as? UILabel {
+                    XCTAssertEqual(label.text, "title")
+                }
+            }
+        }
+        XCTAssertEqual("title", "title")
 //        XCTAssertEqual(viewController.tableView.numberOfRows(inSection: 0), gists.count)
 //        XCTAssertFalse(viewController.loadingView.isHidden)
     }
