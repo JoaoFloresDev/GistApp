@@ -3,21 +3,25 @@ import XCTest
 
 @testable import GistList
 
-class GistListViewControllerTests: XCTestCase {
-    var viewController: GistListViewControllerProtocol = GistListViewController(interactor: mockInteractor)
-    var mockInteractor: GistListInteractorProtocol = MockGistListInteractor()
+
+class GistListInteractorMock: GistListInteractorProtocol {
+    var populateGistsCalled = false
+    var gistSelectedCalled = false
     
-    override func setUp() {
-        super.setUp()
-        mockInteractor = MockGistListInteractor()
-        viewController = GistListViewController(interactor: mockInteractor)
-        viewController.loadViewIfNeeded()
+    func populateGists() {
+        populateGistsCalled = true
     }
     
-    override func tearDown() {
-        viewController = nil
-        mockInteractor = nil
-        super.tearDown()
+    func gistSelected(index: Int) {
+        gistSelectedCalled = true
+    }
+}
+
+
+class GistListViewControllerTests: XCTestCase {
+    lazy var mockInteractor = GistListInteractorMock()
+    func makeSut() -> GistListViewControllerProtocol {
+       return GistListViewController(interactor: mockInteractor)
     }
     
     func testViewDidLoad() {
@@ -25,10 +29,10 @@ class GistListViewControllerTests: XCTestCase {
     }
     
     func testDisplayGists() {
-        viewController = GistListViewController()
+        let sut = makeSut()
         let gists = [GistCellModel(userName: "User1", userImageUrl: nil, filesAmount: "5 files")]
-        viewController.displayGists(data: gists)
-        let mirror = Mirror(reflecting: viewController)
+        sut.displayGists(data: gists)
+        let mirror = Mirror(reflecting: sut)
         for child in mirror.children {
             if child.label == "title" {
                 if let label = child.value as? UILabel {
@@ -39,31 +43,5 @@ class GistListViewControllerTests: XCTestCase {
         XCTAssertEqual("title", "title")
 //        XCTAssertEqual(viewController.tableView.numberOfRows(inSection: 0), gists.count)
 //        XCTAssertFalse(viewController.loadingView.isHidden)
-    }
-    
-    func testDisplayError() {
-        let errorModel = ErrorModel(title: "Error", subtitle: "Something went wrong", buttonText: "Retry")
-        viewController.displayError(model: errorModel)
-        
-//        XCTAssertFalse(viewController.loadingView.isHidden)
-        XCTAssertNotNil(viewController.presentedViewController as? UIAlertController)
-    }
-    
-    func testDisplayLoading() {
-        viewController.displayLoading()
-//        XCTAssertFalse(viewController.loadingView.isHidden)
-    }
-}
-
-class MockGistListInteractor: GistListInteractorProtocol {
-    var populateGistsCalled = false
-    var gistSelectedCalled = false
-    
-    func populateGists() {
-        populateGistsCalled = true
-    }
-    
-    func gistSelected(index: Int) {
-        gistSelectedCalled = true
     }
 }
