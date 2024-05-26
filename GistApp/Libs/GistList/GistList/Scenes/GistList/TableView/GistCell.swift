@@ -1,29 +1,12 @@
+//
+//  GistCell.swift
+//  GistList
+//
+//  Created by Joao Victor Flores da Costa on 26/05/24.
+//
+
 import UIKit
 import SnapKit
-
-enum Spaces: Double {
-    case base00 = 4
-    case base01 = 8
-    case base02 = 16
-    case base03 = 24
-    case base04 = 32
-    case base05 = 40
-    case base06 = 48
-    case base07 = 56
-    case base08 = 64
-    case base09 = 72
-    case base10 = 80
-    
-    func value() -> Double {
-        return self.rawValue
-    }
-}
-
-struct GistCellModel {
-    let userName: String?
-    let userImageUrl: URL?
-    let filesAmount: String?
-}
 
 class GistCell: UITableViewCell {
     // MARK: - Views
@@ -67,6 +50,7 @@ class GistCell: UITableViewCell {
         configure(with: model)
         setupViewHierarchy()
         setupConstraints()
+        setupAccessibility()
     }
     
     required init?(coder: NSCoder) {
@@ -120,18 +104,9 @@ class GistCell: UITableViewCell {
         avatarImageView.fetchImage(from: model.userImageUrl)
     }
     
-    private func fetchImage(from url: URL?, completion: @escaping (UIImage?) -> Void) {
-        guard let url = url else {
-            completion(nil)
-            return
-        }
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil, let image = UIImage(data: data) else {
-                completion(nil)
-                return
-            }
-            completion(image)
-        }
-        task.resume()
+    private func setupAccessibility() {
+        isAccessibilityElement = true
+        accessibilityLabel = "Gist Cell"
+        accessibilityValue = "User: \(nameLabel.text ?? "Unknown"), \(filesLabel.text ?? "Unknown")"
     }
 }

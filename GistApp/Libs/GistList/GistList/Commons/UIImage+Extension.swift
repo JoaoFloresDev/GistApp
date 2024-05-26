@@ -12,14 +12,17 @@ extension UIImageView {
         guard let url = url else {
             return
         }
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil, let image = UIImage(data: data) else {
-                return
+        DispatchQueue.global().async {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data, error == nil, let image = UIImage(data: data) else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.image = image
+                }
             }
-            DispatchQueue.main.async {
-                self.image = image
-            }
+            task.resume()
         }
-        task.resume()
     }
 }
+

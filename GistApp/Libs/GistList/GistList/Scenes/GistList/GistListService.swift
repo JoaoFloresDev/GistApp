@@ -24,7 +24,7 @@ final class GistListService: GistListServiceProtocol {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         dependencie.coreApi.makeRequest(
-            properties: RequestProperties.gistsList(page: 0),
+            properties: RequestProperties.gistsList(page: index),
             decoder: decoder,
             responseType: [GistModel].self
         ) { result in

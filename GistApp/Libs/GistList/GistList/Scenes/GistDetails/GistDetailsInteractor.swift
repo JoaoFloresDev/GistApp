@@ -9,7 +9,7 @@ protocol GistDetailsInteractorProtocol {
     func populateGistDetail()
 }
 
-public class GistDetailsInteractor: GistDetailsInteractorProtocol {
+final class GistDetailsInteractor: GistDetailsInteractorProtocol {
     var presenter: GistDetailsPresenterProtocol
     var model: GistDetailModel
         

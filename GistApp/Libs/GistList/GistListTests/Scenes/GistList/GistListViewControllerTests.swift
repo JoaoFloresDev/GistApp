@@ -9,9 +9,9 @@ import XCTest
 @testable import GistList
 
 final class GistListInteractorMock: GistListInteractorProtocol {
-    var populateGistsCallsCount = 0
+    var populateGistsCalled = false
     func populateGists() {
-        populateGistsCallsCount += 1
+        populateGistsCalled = true
     }
     
     var gistSelectedCallsCount = 0
@@ -38,7 +38,8 @@ final class GistListViewControllerTests: XCTestCase {
     }
     
     func test_whenInit_thenCallInteractorPopulateGists() {
-        let (interactor, _) = makeSut()
-        XCTAssertEqual(interactor.populateGistsCallsCount, 1)
+        let (interactor, controller) = makeSut()
+        controller.viewDidLoad()
+        XCTAssertTrue(interactor.populateGistsCalled)
     }
 }

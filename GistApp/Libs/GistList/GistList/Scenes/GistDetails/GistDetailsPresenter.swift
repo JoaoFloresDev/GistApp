@@ -10,7 +10,7 @@ protocol GistDetailsPresenterProtocol {
     func presentGistDetail(data: GistDetailModel)
 }
 
-class GistDetailsPresenter: GistDetailsPresenterProtocol {
+final class GistDetailsPresenter: GistDetailsPresenterProtocol {
     weak var viewController: GistDetailsViewControllerProtocol?
     
     func presentGistDetail(data: GistDetailModel) {

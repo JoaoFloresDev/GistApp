@@ -10,7 +10,7 @@ protocol GistDetailsViewControllerProtocol: AnyObject {
     func displayGistDetail(data: GistDetailModel)
 }
 
-public class GistDetailsViewController: UIViewController {
+final class GistDetailsViewController: UIViewController {
     // MARK: - Variables
     var interactor: GistDetailsInteractorProtocol
     
