@@ -93,7 +93,7 @@ final class GistListViewController: UIViewController {
         footerView.snp.makeConstraints {
             $0.top.equalTo(tableView.snp.bottom)
             $0.leading.trailing.bottom.equalToSuperview()
-            $0.height.equalTo(Spaces.base08.value())
+            $0.height.equalTo(Spaces.base09.value())
         }
         
         loadingView.snp.makeConstraints { make in
