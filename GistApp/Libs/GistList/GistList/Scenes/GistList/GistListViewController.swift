@@ -11,6 +11,7 @@ protocol GistListViewControllerProtocol: AnyObject {
     func displayGists(data: [GistCellModel])
     func displayError(model: ErrorModel)
     func displayLoading()
+    func displayCurrentPage(index: Int)
 }
 
 final class GistListViewController: UIViewController {
@@ -48,6 +49,7 @@ final class GistListViewController: UIViewController {
 
     private lazy var footerView: FooterView = {
         let footerView = FooterView()
+        footerView.delegate = self
         return footerView
     }()
     
@@ -106,6 +108,10 @@ final class GistListViewController: UIViewController {
 }
 
 extension GistListViewController: GistListViewControllerProtocol {
+    func displayCurrentPage(index: Int) {
+        footerView.updatePage(index: index)
+    }
+    
     func displayGists(data: [GistCellModel]) {
         dataSource.update(data: data)
         DispatchQueue.main.async { [weak self] in
@@ -132,6 +138,16 @@ extension GistListViewController: GistListViewControllerProtocol {
     
     func displayLoading() {
         loadingView.isHidden = false
+    }
+}
+
+extension GistListViewController: FooterViewDelegate {
+    func previousButtonPressed() {
+        interactor.showPreviousPage()
+    }
+    
+    func nextButtonPressed() {
+        interactor.showNextPage()
     }
 }
 

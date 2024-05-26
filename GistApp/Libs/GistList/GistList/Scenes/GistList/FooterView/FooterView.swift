@@ -7,7 +7,14 @@
 
 import UIKit
 
-class FooterView: UIView {
+protocol FooterViewDelegate: AnyObject {
+    func previousButtonPressed()
+    func nextButtonPressed()
+}
+
+final class FooterView: UIView {
+    weak var delegate: FooterViewDelegate?
+    
     private lazy var stackView: UIStackView = {
        let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -16,24 +23,33 @@ class FooterView: UIView {
     }()
     
     private lazy var nextButton: UIButton = {
-       let button = UIButton()
-        button.backgroundColor = .red
-        button.setTitle(">", for: .normal)
-        return button
+      let button = UIButton()
+      button.backgroundColor = .systemGray4
+      button.setTitle(">", for: .normal)
+      button.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
+
+      button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+      
+      return button
     }()
-    
+
     private lazy var previousButton: UIButton = {
-       let button = UIButton()
-        button.backgroundColor = .red
-        button.setTitle("<", for: .normal)
-        return button
+      let button = UIButton()
+      button.backgroundColor = .systemGray4
+      button.setTitle("<", for: .normal)
+      button.addTarget(self, action: #selector(previousButtonPressed), for: .touchUpInside)
+
+      button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+      
+      return button
     }()
     
     private lazy var pageText: UILabel = {
        let label = UILabel()
-        label.backgroundColor = .blue
+        label.backgroundColor = .systemGray6
         label.textAlignment = .center
         label.text = "0"
+        label.font = UIFont.boldSystemFont(ofSize: 20.0)
         return label
     }()
     
@@ -47,6 +63,10 @@ class FooterView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    func updatePage(index: Int) {
+        pageText.text = "\(index)"
+    }
+    
     private func setupViewHierarchy() {
         addSubview(stackView)
         stackView.addArrangedSubview(previousButton)
@@ -56,7 +76,18 @@ class FooterView: UIView {
     
     private func setupConstraints() {
         stackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.leading.trailing.top.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(Spaces.base02.value())
         }
+    }
+    
+    @objc 
+    private func nextButtonPressed() {
+        delegate?.nextButtonPressed()
+    }
+    
+    @objc 
+    private func previousButtonPressed() {
+        delegate?.previousButtonPressed()
     }
 }

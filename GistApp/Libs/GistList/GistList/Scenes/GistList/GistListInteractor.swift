@@ -8,12 +8,15 @@
 protocol GistListInteractorProtocol {
     func populateGists()
     func gistSelected(index: Int)
+    func showPreviousPage()
+    func showNextPage()
 }
 
 final class GistListInteractor {
     let service: GistListServiceProtocol
     let presenter: GistListPresenterProtocol
     var model: [GistModel] = []
+    var currentIndex = 0
     
     init(
         service: GistListServiceProtocol,
@@ -34,6 +37,21 @@ final class GistListInteractor {
 }
 
 extension GistListInteractor: GistListInteractorProtocol {
+    func showPreviousPage() {
+        guard currentIndex > 0 else {
+            return
+        }
+        currentIndex -= 1
+        presenter.presentCurrentPage(index: currentIndex)
+        populateGistsPage(index: currentIndex)
+    }
+    
+    func showNextPage() {
+        currentIndex += 1
+        presenter.presentCurrentPage(index: currentIndex)
+        populateGistsPage(index: currentIndex)
+    }
+    
     func gistSelected(index: Int) {
         guard index < model.count else {
             return
@@ -42,9 +60,13 @@ extension GistListInteractor: GistListInteractorProtocol {
     }
     
     func populateGists() {
+        populateGistsPage()
+    }
+    
+    func populateGistsPage(index: Int = 0) {
         self.presenter.presentLoading()
         
-        service.fetchData(index: .zero) { result in
+        service.fetchData(index: index) { result in
             switch result {
             case .success(let model):
                 self.model = model

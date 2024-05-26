@@ -11,6 +11,7 @@ protocol GistListPresenterProtocol {
     func presentLoading()
     func presentError(title: String, subtitle: String?, buttonText: String)
     func presentGistDetail(model: GistModel)
+    func presentCurrentPage(index: Int)
 }
 
 final class GistListPresenter {
@@ -23,6 +24,10 @@ final class GistListPresenter {
 }
 
 extension GistListPresenter: GistListPresenterProtocol {
+    func presentCurrentPage(index: Int) {
+        viewController?.displayCurrentPage(index: index)
+    }
+    
     func presentGists(data: [GistCellModel]) {
         viewController?.displayGists(data: data)
     }

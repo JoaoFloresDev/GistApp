@@ -56,6 +56,13 @@ final class GistListPresenterMock: GistListPresenterProtocol {
         presentGistDetailCallsCount += 1
         presentGistDetailModel = model
     }
+    
+    var presentCurrentPageCallsCount = 0
+    var presentCurrentPageValue: Int?
+    func presentCurrentPage(index: Int) {
+        presentCurrentPageCallsCount += 1
+        presentCurrentPageValue = index
+    }
 }
 
 final class GistListInteractorTests: XCTestCase {

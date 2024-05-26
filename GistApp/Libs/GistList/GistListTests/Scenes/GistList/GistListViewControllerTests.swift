@@ -20,6 +20,17 @@ final class GistListInteractorMock: GistListInteractorProtocol {
         gistSelectedCallsCount += 1
         gistSelectedValue = index
     }
+    
+    var showPreviousPageCallsCount = 0
+    func showPreviousPage() {
+        showPreviousPageCallsCount += 1
+    }
+    
+    var showNextPagePageCallsCount = 0
+    func showNextPage() {
+        showNextPagePageCallsCount += 1
+    }
+    
 }
 
 final class GistListViewControllerTests: XCTestCase {

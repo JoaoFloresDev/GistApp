@@ -11,24 +11,28 @@ import XCTest
 class GistListViewControllerMock: GistListViewControllerProtocol {
     var displayGistsCallsCount = 0
     var displayGistsData: [GistCellModel]?
-
-    var displayErrorCallsCount = 0
-    var displayErrorModel: ErrorModel?
-
-    var displayLoadingCallsCount = 0
-
     func displayGists(data: [GistCellModel]) {
         displayGistsCallsCount += 1
         displayGistsData = data
     }
 
+    var displayErrorCallsCount = 0
+    var displayErrorModel: ErrorModel?
     func displayError(model: ErrorModel) {
         displayErrorCallsCount += 1
         displayErrorModel = model
     }
 
+    var displayLoadingCallsCount = 0
     func displayLoading() {
         displayLoadingCallsCount += 1
+    }
+    
+    var displayCurrentPageValue: Int?
+    var displayCurrentPageCallsCount = 0
+    func displayCurrentPage(index: Int) {
+        displayCurrentPageValue = index
+        displayCurrentPageCallsCount += 1
     }
 }
 
