@@ -46,6 +46,11 @@ final class GistListViewController: UIViewController {
         return tableView
     }()
 
+    private lazy var footerView: FooterView = {
+        let footerView = FooterView()
+        return footerView
+    }()
+    
     // MARK: - Initialization
     init(interactor: GistListInteractorProtocol) {
         self.interactor = interactor
@@ -73,12 +78,19 @@ final class GistListViewController: UIViewController {
     
     private func setupViewHierarchy() {
         view.addSubview(tableView)
+        view.addSubview(footerView)
         view.addSubview(loadingView)
     }
     
     private func setupConstraints() {
-        tableView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+        tableView.snp.makeConstraints {
+            $0.top.leading.trailing.equalToSuperview()
+        }
+        
+        footerView.snp.makeConstraints {
+            $0.top.equalTo(tableView.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
+            $0.height.equalTo(Spaces.base08.value())
         }
         
         loadingView.snp.makeConstraints { make in

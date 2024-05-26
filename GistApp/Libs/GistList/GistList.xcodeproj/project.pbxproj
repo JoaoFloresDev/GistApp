@@ -11,6 +11,7 @@
 		732EA8B22C035FA300BCCF21 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732EA8B12C035FA300BCCF21 /* UIImage+Extension.swift */; };
 		732EA8B42C03696700BCCF21 /* Spaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732EA8B32C03696700BCCF21 /* Spaces.swift */; };
 		732EA8B62C03698300BCCF21 /* GistCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732EA8B52C03698300BCCF21 /* GistCellModel.swift */; };
+		732EA8B92C036C6100BCCF21 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732EA8B82C036C6100BCCF21 /* FooterView.swift */; };
 		7398427D2C0347EF00535F99 /* GistModelFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7398427C2C0347EE00535F99 /* GistModelFixture.swift */; };
 		73FFCD502C0306FD000D494E /* GistListViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD4F2C0306FD000D494E /* GistListViewsTests.swift */; };
 		73FFCD512C0306FD000D494E /* GistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 73FFCD452C0306FC000D494E /* GistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -75,6 +76,7 @@
 		732EA8B12C035FA300BCCF21 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		732EA8B32C03696700BCCF21 /* Spaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaces.swift; sourceTree = "<group>"; };
 		732EA8B52C03698300BCCF21 /* GistCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistCellModel.swift; sourceTree = "<group>"; };
+		732EA8B82C036C6100BCCF21 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		7398427C2C0347EE00535F99 /* GistModelFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistModelFixture.swift; sourceTree = "<group>"; };
 		73FFCD422C0306FC000D494E /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FFCD452C0306FC000D494E /* GistList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GistList.h; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 			);
 			name = Pods;
 			path = ../../Pods;
+			sourceTree = "<group>";
+		};
+		732EA8B72C036C4F00BCCF21 /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				732EA8B82C036C6100BCCF21 /* FooterView.swift */,
+			);
+			path = FooterView;
 			sourceTree = "<group>";
 		};
 		7398427B2C0347D000535F99 /* Fixtures */ = {
@@ -222,6 +232,7 @@
 		73FFCD672C031476000D494E /* GistList */ = {
 			isa = PBXGroup;
 			children = (
+				732EA8B72C036C4F00BCCF21 /* FooterView */,
 				73FFCD682C031476000D494E /* TableView */,
 				73FFCD6B2C031476000D494E /* GistListPresenter.swift */,
 				73FFCD6C2C031476000D494E /* GistListInteractor.swift */,
@@ -446,6 +457,7 @@
 				73FFCD7D2C031476000D494E /* GistListViewController.swift in Sources */,
 				73FFCD612C031466000D494E /* GistModel.swift in Sources */,
 				73FFCD812C031476000D494E /* GistDetailsPresenter.swift in Sources */,
+				732EA8B92C036C6100BCCF21 /* FooterView.swift in Sources */,
 				73FFCD832C0314B5000D494E /* RequestProperties.swift in Sources */,
 				73FFCD602C031466000D494E /* GistFileModel.swift in Sources */,
 				73FFCD622C031466000D494E /* GistOwnerModel.swift in Sources */,
