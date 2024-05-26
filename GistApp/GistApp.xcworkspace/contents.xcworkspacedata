@@ -5,7 +5,7 @@
       location = "group:Libs/GistList/GistList.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Libs/CoreApiInterface/CoreApiInterface.xcodeproj">
+      location = "group:../../../.Trash/GistApp 22.06.22/GistApp/Libs/CoreApiInterface/CoreApiInterface.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Libs/CoreApi/CoreApi.xcodeproj">
