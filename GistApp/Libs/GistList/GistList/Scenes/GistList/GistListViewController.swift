@@ -22,7 +22,7 @@ final class GistListViewController: UIViewController {
     // MARK: - Views
     private lazy var loadingView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(white: 0, alpha: 0.2)
+        view.backgroundColor = .systemGray6
         view.layer.cornerRadius = 10
         view.clipsToBounds = true
         
@@ -93,12 +93,12 @@ final class GistListViewController: UIViewController {
         footerView.snp.makeConstraints {
             $0.top.equalTo(tableView.snp.bottom)
             $0.leading.trailing.bottom.equalToSuperview()
-            $0.height.equalTo(Spaces.base09.value())
+            $0.height.equalTo(Spaces.base10.value())
         }
         
         loadingView.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.width.height.equalTo(100)
+            make.width.height.equalTo(Spaces.base10.value())
         }
     }
     

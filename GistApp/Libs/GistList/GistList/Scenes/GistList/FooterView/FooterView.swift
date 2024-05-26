@@ -31,7 +31,7 @@ final class FooterView: UIView {
       button.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
 
       button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
-      
+      button.layer.cornerRadius = 8.0
       return button
     }()
 
@@ -42,13 +42,13 @@ final class FooterView: UIView {
       button.addTarget(self, action: #selector(previousButtonPressed), for: .touchUpInside)
 
       button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
-      
+      button.layer.cornerRadius = 8.0
       return button
     }()
     
     private lazy var pageText: UILabel = {
        let label = UILabel()
-        label.backgroundColor = .systemGray6
+        label.backgroundColor = .clear
         label.textAlignment = .center
         label.text = "0"
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
@@ -81,7 +81,8 @@ final class FooterView: UIView {
     
     private func setupConstraints() {
         stackView.snp.makeConstraints {
-            $0.leading.trailing.top.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(Spaces.base02.value())
             $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
         }
     }
