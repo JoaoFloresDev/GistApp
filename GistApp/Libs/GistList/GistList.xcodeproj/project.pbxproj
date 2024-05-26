@@ -29,8 +29,6 @@
 		73505C452C02D3730062FC5F /* GistDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C392C02D3730062FC5F /* GistDetailsPresenter.swift */; };
 		73505C472C02D4460062FC5F /* CoreApiInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73505C462C02D4460062FC5F /* CoreApiInterface.framework */; };
 		73505C482C02D4460062FC5F /* CoreApiInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73505C462C02D4460062FC5F /* CoreApiInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73B4002D2C02D88600F26DBA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B4002C2C02D88600F26DBA /* SnapKit.framework */; };
-		73B4002E2C02D88600F26DBA /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B4002C2C02D88600F26DBA /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B655E5AB8518F2509B17357E /* Pods_GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DC3EA31C4B036D656F829D /* Pods_GistList.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,17 +50,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				73505C482C02D4460062FC5F /* CoreApiInterface.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		73B4002F2C02D88600F26DBA /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				73B4002E2C02D88600F26DBA /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,7 +100,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				73505C0F2C02D2B40062FC5F /* GistList.framework in Frameworks */,
-				73B4002D2C02D88600F26DBA /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +268,6 @@
 				73505C0A2C02D2B40062FC5F /* Sources */,
 				73505C0B2C02D2B40062FC5F /* Frameworks */,
 				73505C0C2C02D2B40062FC5F /* Resources */,
-				73B4002F2C02D88600F26DBA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -611,7 +596,6 @@
 		73505C1C2C02D2B40062FC5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NZC6LC8NWM;
@@ -629,7 +613,6 @@
 		73505C1D2C02D2B40062FC5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NZC6LC8NWM;

@@ -6,7 +6,8 @@
 //
 
 import XCTest
-@testable import GistList
+
+//@testable import GistList
 
 final class GistListTests: XCTestCase {
 
