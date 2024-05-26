@@ -85,24 +85,6 @@ public class GistDetailsViewController: UIViewController {
 extension GistDetailsViewController: GistDetailsViewControllerProtocol {
     func displayGistDetail(data: GistDetailModel) {
         nameLabel.text = data.userName
-        
-        if let url = data.userImageUrl {
-            fetchImage(from: url) { [weak self] image in
-                DispatchQueue.main.async {
-                    self?.imageView.image = image
-                }
-            }
-        }
-    }
-    
-    private func fetchImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil, let image = UIImage(data: data) else {
-                completion(nil)
-                return
-            }
-            completion(image)
-        }
-        task.resume()
+        imageView.fetchImage(from: data.userImageUrl)
     }
 }

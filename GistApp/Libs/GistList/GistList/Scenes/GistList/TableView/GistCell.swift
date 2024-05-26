@@ -117,12 +117,7 @@ class GistCell: UITableViewCell {
     private func configure(with model: GistCellModel) {
         nameLabel.text = model.userName
         filesLabel.text = model.filesAmount
-        
-        fetchImage(from: model.userImageUrl) { [weak self] image in
-            DispatchQueue.main.async {
-                self?.avatarImageView.image = image
-            }
-        }
+        avatarImageView.fetchImage(from: model.userImageUrl)
     }
     
     private func fetchImage(from url: URL?, completion: @escaping (UIImage?) -> Void) {

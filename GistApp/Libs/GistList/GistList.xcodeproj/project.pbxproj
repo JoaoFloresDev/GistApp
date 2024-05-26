@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4F5455AF0202B35C732A815B /* Pods_GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E4CC9E4526CE88F722E070 /* Pods_GistList.framework */; };
+		732EA8B22C035FA300BCCF21 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732EA8B12C035FA300BCCF21 /* UIImage+Extension.swift */; };
 		7398427D2C0347EF00535F99 /* GistModelFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7398427C2C0347EE00535F99 /* GistModelFixture.swift */; };
 		73FFCD502C0306FD000D494E /* GistListViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD4F2C0306FD000D494E /* GistListViewsTests.swift */; };
 		73FFCD512C0306FD000D494E /* GistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 73FFCD452C0306FC000D494E /* GistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73FFCD5B2C030702000D494E /* GistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD5A2C030702000D494E /* GistList.swift */; };
 		73FFCD602C031466000D494E /* GistFileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD5D2C031466000D494E /* GistFileModel.swift */; };
 		73FFCD612C031466000D494E /* GistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD5E2C031466000D494E /* GistModel.swift */; };
 		73FFCD622C031466000D494E /* GistOwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD5F2C031466000D494E /* GistOwnerModel.swift */; };
@@ -70,12 +70,12 @@
 /* Begin PBXFileReference section */
 		43860BB484588BBE40D6E809 /* Pods-GistList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistList.release.xcconfig"; path = "Target Support Files/Pods-GistList/Pods-GistList.release.xcconfig"; sourceTree = "<group>"; };
 		4C35E0F77E940ED9D95156E6 /* Pods-GistList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistList.debug.xcconfig"; path = "Target Support Files/Pods-GistList/Pods-GistList.debug.xcconfig"; sourceTree = "<group>"; };
+		732EA8B12C035FA300BCCF21 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		7398427C2C0347EE00535F99 /* GistModelFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistModelFixture.swift; sourceTree = "<group>"; };
 		73FFCD422C0306FC000D494E /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FFCD452C0306FC000D494E /* GistList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GistList.h; sourceTree = "<group>"; };
 		73FFCD4A2C0306FD000D494E /* GistListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GistListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FFCD4F2C0306FD000D494E /* GistListViewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewsTests.swift; sourceTree = "<group>"; };
-		73FFCD5A2C030702000D494E /* GistList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistList.swift; sourceTree = "<group>"; };
 		73FFCD5D2C031466000D494E /* GistFileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistFileModel.swift; sourceTree = "<group>"; };
 		73FFCD5E2C031466000D494E /* GistModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistModel.swift; sourceTree = "<group>"; };
 		73FFCD5F2C031466000D494E /* GistOwnerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistOwnerModel.swift; sourceTree = "<group>"; };
@@ -168,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				73FFCD452C0306FC000D494E /* GistList.h */,
-				73FFCD5A2C030702000D494E /* GistList.swift */,
 				73FFCD632C03146A000D494E /* Commons */,
 				73FFCD5C2C031466000D494E /* Models */,
 				73FFCD662C031476000D494E /* Scenes */,
@@ -200,6 +199,7 @@
 			children = (
 				73FFCD642C03146A000D494E /* NetworkError.swift */,
 				73FFCD652C03146A000D494E /* RequestProperties.swift */,
+				732EA8B12C035FA300BCCF21 /* UIImage+Extension.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -428,6 +428,7 @@
 				73FFCD822C0314B1000D494E /* NetworkError.swift in Sources */,
 				73FFCD7A2C031476000D494E /* GistListService.swift in Sources */,
 				73FFCD772C031476000D494E /* TableViewDataSource.swift in Sources */,
+				732EA8B22C035FA300BCCF21 /* UIImage+Extension.swift in Sources */,
 				73FFCD7C2C031476000D494E /* GistListCoordinator.swift in Sources */,
 				73FFCD792C031476000D494E /* GistListInteractor.swift in Sources */,
 				73FFCD762C031476000D494E /* GistCell.swift in Sources */,
@@ -441,7 +442,6 @@
 				73FFCD602C031466000D494E /* GistFileModel.swift in Sources */,
 				73FFCD622C031466000D494E /* GistOwnerModel.swift in Sources */,
 				73FFCD7B2C031476000D494E /* GistListFactory.swift in Sources */,
-				73FFCD5B2C030702000D494E /* GistList.swift in Sources */,
 				73FFCD782C031476000D494E /* GistListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
