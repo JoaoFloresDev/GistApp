@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Libs/CoreApiInterface/CoreApiInterface.xcodeproj">
+      location = "group:Libs/GistList/GistList.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Libs/GistList/GistList.xcodeproj">
+      location = "group:Libs/CoreApiInterface/CoreApiInterface.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Libs/CoreApi/CoreApi.xcodeproj">

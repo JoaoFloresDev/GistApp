@@ -1,11 +1,11 @@
 platform :ios, '16.0'
 
 post_install do |installer|
- installer.pods_project.targets.each do |target|
-  target.build_configurations.each do |config|
-   config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '16.0'
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '16.0'
+    end
   end
- end
 end
 
 workspace 'GistApp.xcworkspace'
@@ -23,13 +23,9 @@ end
 
 target 'GistList' do
   use_frameworks!
+
   project './Libs/GistList/GistList.xcodeproj'
 
   # Pods for GistList
   pod 'SnapKit'
-
-  target 'GistListTests' do
-    inherit! :search_paths
-    # Pods for testing GistList
-  end
 end
