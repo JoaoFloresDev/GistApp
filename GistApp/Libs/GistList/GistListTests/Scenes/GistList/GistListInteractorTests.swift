@@ -59,47 +59,47 @@ final class GistListPresenterMock: GistListPresenterProtocol {
 }
 
 final class GistListInteractorTests: XCTestCase {
-    let serviceMock = GistListServiceMock()
-    let presenterMock = GistListPresenterMock()
-    
-    func makeSut() -> GistListInteractor {
-        GistListInteractor(service: serviceMock, presenter: presenterMock)
+    func makeSut() -> (GistListInteractor, GistListServiceMock, GistListPresenterMock) {
+        let service = GistListServiceMock()
+        let presenter = GistListPresenterMock()
+        let interactor = GistListInteractor(service: service, presenter: presenter)
+        return (interactor, service, presenter)
     }
     
     func test_whenServiceReturnsEmptyList_thenPresenterIsNotCalled() {
-        let sut = makeSut()
-        serviceMock.result = .success([])
-        sut.populateGists()
+        let (controller, service, presenter) = makeSut()
+        service.result = .success([])
+        controller.populateGists()
         
-        XCTAssertEqual(serviceMock.fetchDataCallsCount, 1)
-        XCTAssertEqual(serviceMock.fetchDataIndex, 1)
+        XCTAssertEqual(service.fetchDataCallsCount, 1)
+        XCTAssertEqual(service.fetchDataIndex, 0)
     }
     
     func test_whenServiceReturnsGists_thenPresenterIsCalledWithGists() {
-        let sut = makeSut()
-        serviceMock.result = .success([GistModel.emptyFixture()])
-        sut.populateGists()
-        XCTAssertEqual(presenterMock.presentGistsCallsCount, 1)
-        XCTAssertEqual(presenterMock.presentGistsData?.count, 1)
+        let (controller, service, presenter) = makeSut()
+        service.result = .success([GistModel.fixture()])
+        controller.populateGists()
+        XCTAssertEqual(presenter.presentGistsCallsCount, 1)
+        XCTAssertEqual(presenter.presentGistsData?.count, 1)
     }
     
     func test_whenServiceFails_thenPresenterIsCalledWithError() {
-        let sut = makeSut()
-        serviceMock.result = .failure(NSError())
-        sut.populateGists()
+        let (controller, service, presenter) = makeSut()
+        service.result = .failure(NetworkError.emptyData)
+        controller.populateGists()
         
-        XCTAssertEqual(presenterMock.presentErrorTitle, "")
-        XCTAssertEqual(presenterMock.presentErrorSubtitle, "")
-        XCTAssertEqual(presenterMock.presentErrorCallsCount, 1)
+        XCTAssertEqual(presenter.presentErrorTitle, "Erro")
+        XCTAssertEqual(presenter.presentErrorSubtitle ?? "", "The operation couldn’t be completed. (GistList.NetworkError error 0.)")
+        XCTAssertEqual(presenter.presentErrorCallsCount, 1)
     }
     
     func test_whenGistIsSelected_thenNoErrorIsThrown() {
-        let sut = makeSut()
-        serviceMock.result = .success([GistModel.emptyFixture()])
-        sut.populateGists()
-        sut.gistSelected(index: 0)
+        let (controller, service, presenter) = makeSut()
+        service.result = .success([GistModel.fixture(user: "user")])
+        controller.populateGists()
+        controller.gistSelected(index: 0)
         
-        XCTAssertEqual(presenterMock.presentGistDetailModel?.user, "user")
-        XCTAssertEqual(presenterMock.presentGistDetailCallsCount, 1)
+        XCTAssertEqual(presenter.presentGistDetailModel?.user, "user")
+        XCTAssertEqual(presenter.presentGistDetailCallsCount, 1)
     }
 }

@@ -23,21 +23,22 @@ final class GistListInteractorMock: GistListInteractorProtocol {
 }
 
 final class GistListViewControllerTests: XCTestCase {
-    lazy var interactorMock = GistListInteractorMock()
-    func makeSut() -> GistListViewController {
-       GistListViewController(interactor: interactorMock)
+    
+    func makeSut() -> (interactor: GistListInteractorMock, viewController: GistListViewController) {
+        let interactor = GistListInteractorMock()
+        let controller = GistListViewController(interactor: interactor)
+        return (interactor, controller)
     }
     
     func test_whenDidSelectRow_thenCallInteractorGistSelected() {
-       let sut = makeSut()
-        sut.tableView(UITableView(), didSelectRowAt: IndexPath(item: 1, section: 0))
-        XCTAssertEqual(interactorMock.gistSelectedValue, 1)
-        XCTAssertEqual(interactorMock.gistSelectedCallsCount, 1)
+        let (interactor, viewController) = makeSut()
+        viewController.tableView(UITableView(), didSelectRowAt: IndexPath(item: 1, section: 0))
+        XCTAssertEqual(interactor.gistSelectedValue, 1)
+        XCTAssertEqual(interactor.gistSelectedCallsCount, 1)
     }
     
-    func test_whenViewDidLoad_thenCallInteractorPopulateGists() {
-       let sut = makeSut()
-        sut.viewDidLoad()
-        XCTAssertEqual(interactorMock.populateGistsCallsCount, 1)
+    func test_whenInit_thenCallInteractorPopulateGists() {
+        let (interactor, _) = makeSut()
+        XCTAssertEqual(interactor.populateGistsCallsCount, 1)
     }
 }

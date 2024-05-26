@@ -49,6 +49,7 @@ final class GistListViewController: UIViewController {
     // MARK: - Initialization
     init(interactor: GistListInteractorProtocol) {
         self.interactor = interactor
+        interactor.populateGists()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -58,7 +59,6 @@ final class GistListViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        interactor.populateGists()
         setupUI()
         setupBackButton()
     }
