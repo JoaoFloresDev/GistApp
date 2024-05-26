@@ -13,7 +13,7 @@ protocol GistListViewControllerProtocol: AnyObject {
     func displayLoading()
 }
 
-public class GistListViewController: UIViewController {
+final class GistListViewController: UIViewController {
     // MARK: - Variables
     private var dataSource = TableViewDataSource()
     var interactor: GistListInteractorProtocol

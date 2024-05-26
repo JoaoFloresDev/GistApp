@@ -13,7 +13,7 @@ protocol GistListServiceProtocol {
 
 typealias Dependencies = CoreApiDependence
 
-class GistListService: GistListServiceProtocol {
+final class GistListService: GistListServiceProtocol {
     private let dependencie: Dependencies
     
     init(dependencie: Dependencies) {

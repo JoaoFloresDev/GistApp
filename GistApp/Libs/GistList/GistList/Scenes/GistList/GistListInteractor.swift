@@ -10,7 +10,7 @@ protocol GistListInteractorProtocol {
     func gistSelected(index: Int)
 }
 
-class GistListInteractor {
+final class GistListInteractor {
     let service: GistListServiceProtocol
     let presenter: GistListPresenterProtocol
     var model: [GistModel] = []
@@ -35,6 +35,9 @@ class GistListInteractor {
 
 extension GistListInteractor: GistListInteractorProtocol {
     func gistSelected(index: Int) {
+        guard index < model.count else {
+            return
+        }
         presenter.presentGistDetail(model: model[index])
     }
     

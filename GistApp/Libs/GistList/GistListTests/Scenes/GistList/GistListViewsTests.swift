@@ -8,20 +8,6 @@
 import XCTest
 @testable import GistList
 
-class GistListInteractorMock: GistListInteractorProtocol {
-    var populateGistsCallsCount = 0
-    func populateGists() {
-        populateGistsCallsCount += 1
-    }
-    
-    var gistSelectedCallsCount = 0
-    var gistSelectedValue: Int?
-    func gistSelected(index: Int) {
-        populateGistsCallsCount += 1
-        gistSelectedValue = index
-    }
-}
-
 final class GistListViewsTests: XCTestCase {
     func makeSut() -> GistListViewController {
         GistListViewController(interactor: GistListInteractorMock())

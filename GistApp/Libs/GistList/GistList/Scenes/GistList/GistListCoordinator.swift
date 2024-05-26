@@ -12,7 +12,7 @@ protocol GistListCoordinatorProtocol {
     func openGistDetail(model: GistModel)
 }
 
-class GistListCoordinator: GistListCoordinatorProtocol {
+final class GistListCoordinator: GistListCoordinatorProtocol {
     weak var viewController: UIViewController?
     
     func openGistDetail(model: GistModel) {

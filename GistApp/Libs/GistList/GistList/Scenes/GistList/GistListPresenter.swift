@@ -13,7 +13,7 @@ protocol GistListPresenterProtocol {
     func presentGistDetail(model: GistModel)
 }
 
-class GistListPresenter {
+final class GistListPresenter {
     let coordinator: GistListCoordinatorProtocol
     weak var viewController: GistListViewControllerProtocol?
     
