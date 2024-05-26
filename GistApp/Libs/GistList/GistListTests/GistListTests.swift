@@ -11,14 +11,17 @@ import XCTest
 final class GistListTests: XCTestCase {
 
     override func setUpWithError() throws {
+        print("aaa")
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
+        print("aaa")
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
     func testExample() throws {
+        print("aaa")
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         // Any test you write for XCTest can be annotated as throws and async.

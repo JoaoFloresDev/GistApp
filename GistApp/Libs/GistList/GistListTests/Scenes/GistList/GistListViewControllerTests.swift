@@ -18,7 +18,7 @@ class GistListInteractorMock: GistListInteractorProtocol {
 }
 
 
-class GistListViewControllerTests: XCTestCase {
+final class GistListViewControllerTests: XCTestCase {
     lazy var mockInteractor = GistListInteractorMock()
     func makeSut() -> GistListViewControllerProtocol {
        return GistListViewController(interactor: mockInteractor)
