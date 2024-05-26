@@ -46,7 +46,7 @@ final class GistListViewController: UIViewController {
         tableView.separatorStyle = .none
         return tableView
     }()
-
+    
     private lazy var footerView: FooterView = {
         let footerView = FooterView()
         footerView.delegate = self
@@ -86,7 +86,8 @@ final class GistListViewController: UIViewController {
     
     private func setupConstraints() {
         tableView.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
         }
         
         footerView.snp.makeConstraints {

@@ -13,10 +13,11 @@ protocol GistListCoordinatorProtocol {
 }
 
 final class GistListCoordinator: GistListCoordinatorProtocol {
+    // MARK: - Variables
     weak var viewController: UIViewController?
     
+    // MARK: - Public Function
     func openGistDetail(model: GistModel) {
-        
         let controller = GistDetailsFactory.make(model: .init(userName: model.owner?.login, userImageUrl: model.owner?.avatarUrl))
         viewController?.navigationController?.pushViewController(controller, animated: true)
     }

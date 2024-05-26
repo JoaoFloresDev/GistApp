@@ -10,9 +10,11 @@ protocol GistDetailsInteractorProtocol {
 }
 
 final class GistDetailsInteractor: GistDetailsInteractorProtocol {
+    // MARK: - Variables
     var presenter: GistDetailsPresenterProtocol
     var model: GistDetailModel
         
+    // MARK: - Initialization
     init(
         model: GistDetailModel,
         presenter: GistDetailsPresenterProtocol
@@ -21,6 +23,7 @@ final class GistDetailsInteractor: GistDetailsInteractorProtocol {
         self.presenter = presenter
     }
     
+    // MARK: - Public Functions
     func populateGistDetail() {
         presenter.presentGistDetail(data: model)
     }

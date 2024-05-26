@@ -11,8 +11,10 @@ protocol GistDetailsPresenterProtocol {
 }
 
 final class GistDetailsPresenter: GistDetailsPresenterProtocol {
+    // MARK: - Variables
     weak var viewController: GistDetailsViewControllerProtocol?
     
+    // MARK: - Public Functions
     func presentGistDetail(data: GistDetailModel) {
         viewController?.displayGistDetail(data: data)
     }

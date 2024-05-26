@@ -15,9 +15,11 @@ protocol GistListPresenterProtocol {
 }
 
 final class GistListPresenter {
+    // MARK: - Variables
     let coordinator: GistListCoordinatorProtocol
     weak var viewController: GistListViewControllerProtocol?
     
+    // MARK: - Initialization
     init(coordinator: GistListCoordinatorProtocol) {
         self.coordinator = coordinator
     }

@@ -13,11 +13,13 @@ protocol GistListInteractorProtocol {
 }
 
 final class GistListInteractor {
+    // MARK: - Variables
     let service: GistListServiceProtocol
     let presenter: GistListPresenterProtocol
     var model: [GistModel] = []
     var currentIndex = 0
     
+    // MARK: - Initialization
     init(
         service: GistListServiceProtocol,
         presenter: GistListPresenterProtocol
@@ -26,6 +28,7 @@ final class GistListInteractor {
         self.presenter = presenter
     }
     
+    // MARK: - Private Functions
     private func convertToGistCellModel(gistModel: [GistModel]) -> [GistCellModel] {
         gistModel.map {
             GistCellModel(

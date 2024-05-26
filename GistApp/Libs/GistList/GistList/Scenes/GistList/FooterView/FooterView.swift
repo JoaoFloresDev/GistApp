@@ -13,8 +13,10 @@ protocol FooterViewDelegate: AnyObject {
 }
 
 final class FooterView: UIView {
+    // MARK: - Variables
     weak var delegate: FooterViewDelegate?
     
+    // MARK: - Views
     private lazy var stackView: UIStackView = {
        let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -53,8 +55,10 @@ final class FooterView: UIView {
         return label
     }()
     
+    // MARK: - Initialization
     init() {
         super.init(frame: .zero)
+        backgroundColor = .systemGray6
         setupViewHierarchy()
         setupConstraints()
     }
@@ -67,6 +71,7 @@ final class FooterView: UIView {
         pageText.text = "\(index)"
     }
     
+    // MARK: - Private Functions
     private func setupViewHierarchy() {
         addSubview(stackView)
         stackView.addArrangedSubview(previousButton)
@@ -77,7 +82,7 @@ final class FooterView: UIView {
     private func setupConstraints() {
         stackView.snp.makeConstraints {
             $0.leading.trailing.top.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(Spaces.base02.value())
+            $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
         }
     }
     

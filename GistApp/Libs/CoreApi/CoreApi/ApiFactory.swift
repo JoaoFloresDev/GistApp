@@ -47,36 +47,35 @@ public class ApiFactory: ApiFactoring {
         request.httpMethod = properties.method
         request.httpBody = properties.body
         
-        DispatchQueue.global().async {
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                if let error = error {
-                    completion(.failure(error))
-                    return
-                }
-                
-                guard let httpResponse = response as? HTTPURLResponse else {
-                    completion(.failure(RequestError.invalidNetworkProtocol))
-                    return
-                }
-                
-                if !(200...299).contains(httpResponse.statusCode) {
-                    completion(.failure(RequestError.unsuccessfulStatusCode(httpResponse.statusCode)))
-                    return
-                }
-                
-                guard let data = data else {
-                    completion(.failure(RequestError.noData))
-                    return
-                }
-                
-                do {
-                    let decodedData = try decoder.decode(responseType, from: data)
-                    completion(.success(decodedData))
-                } catch {
-                    completion(.failure(error))
-                }
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
             }
             
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(.failure(RequestError.invalidNetworkProtocol))
+                return
+            }
+            
+            if !(200...299).contains(httpResponse.statusCode) {
+                completion(.failure(RequestError.unsuccessfulStatusCode(httpResponse.statusCode)))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(RequestError.noData))
+                return
+            }
+            
+            do {
+                let decodedData = try decoder.decode(responseType, from: data)
+                completion(.success(decodedData))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        DispatchQueue.global().async {
             task.resume()
         }
     }

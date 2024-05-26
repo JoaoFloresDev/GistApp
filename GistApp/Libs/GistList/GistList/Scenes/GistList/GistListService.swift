@@ -11,15 +11,17 @@ protocol GistListServiceProtocol {
     func fetchData(index: Int, completion: @escaping (Result<[GistModel], Error>) -> Void)
 }
 
-typealias Dependencies = CoreApiDependence
-
 final class GistListService: GistListServiceProtocol {
+    // MARK: - Variables
+    typealias Dependencies = CoreApiDependence
     private let dependencie: Dependencies
     
+    // MARK: - Initialization
     init(dependencie: Dependencies) {
         self.dependencie = dependencie
     }
-        
+     
+    // MARK: - Public Functions
     func fetchData(index: Int, completion: @escaping (Result<[GistModel], Error>) -> Void) {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
