@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73505B282C02C72E0062FC5F /* CoreApiInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73505B272C02C72E0062FC5F /* CoreApiInterface.framework */; };
+		73505B292C02C72E0062FC5F /* CoreApiInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73505B272C02C72E0062FC5F /* CoreApiInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73B83ACF2BFFB3AA00F5A61C /* CoreApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B83AC62BFFB3A900F5A61C /* CoreApi.framework */; };
 		73B83AD42BFFB3AA00F5A61C /* CoreApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B83AD32BFFB3AA00F5A61C /* CoreApiTests.swift */; };
 		73B83AD52BFFB3AA00F5A61C /* CoreApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B83AC92BFFB3A900F5A61C /* CoreApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,8 +25,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		73505B2A2C02C72E0062FC5F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73505B292C02C72E0062FC5F /* CoreApiInterface.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		73505B0D2C02C40E0062FC5F /* CoreApiInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreApiInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73505B272C02C72E0062FC5F /* CoreApiInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreApiInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B83AC62BFFB3A900F5A61C /* CoreApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B83AC92BFFB3A900F5A61C /* CoreApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreApi.h; sourceTree = "<group>"; };
 		73B83ACE2BFFB3AA00F5A61C /* CoreApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73505B282C02C72E0062FC5F /* CoreApiInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +72,7 @@
 		73505B0C2C02C40E0062FC5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73505B272C02C72E0062FC5F /* CoreApiInterface.framework */,
 				73505B0D2C02C40E0062FC5F /* CoreApiInterface.framework */,
 			);
 			name = Frameworks;
@@ -117,6 +136,7 @@
 				73B83AC22BFFB3A900F5A61C /* Sources */,
 				73B83AC32BFFB3A900F5A61C /* Frameworks */,
 				73B83AC42BFFB3A900F5A61C /* Resources */,
+				73505B2A2C02C72E0062FC5F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
