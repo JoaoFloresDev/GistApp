@@ -28,7 +28,33 @@
 		73FFCD812C031476000D494E /* GistDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD752C031476000D494E /* GistDetailsPresenter.swift */; };
 		73FFCD822C0314B1000D494E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD642C03146A000D494E /* NetworkError.swift */; };
 		73FFCD832C0314B5000D494E /* RequestProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD652C03146A000D494E /* RequestProperties.swift */; };
+		73FFCD842C0315DD000D494E /* GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FFCD422C0306FC000D494E /* GistList.framework */; };
+		73FFCD852C0315DD000D494E /* GistList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73FFCD422C0306FC000D494E /* GistList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73FFCD862C0315DE000D494E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73FFCD392C0306FC000D494E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73FFCD412C0306FC000D494E;
+			remoteInfo = GistList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73FFCD882C0315DE000D494E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73FFCD852C0315DD000D494E /* GistList.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		43860BB484588BBE40D6E809 /* Pods-GistList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistList.release.xcconfig"; path = "Target Support Files/Pods-GistList/Pods-GistList.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73FFCD842C0315DD000D494E /* GistList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,10 +264,12 @@
 				73FFCD462C0306FD000D494E /* Sources */,
 				73FFCD472C0306FD000D494E /* Frameworks */,
 				73FFCD482C0306FD000D494E /* Resources */,
+				73FFCD882C0315DE000D494E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				73FFCD872C0315DE000D494E /* PBXTargetDependency */,
 			);
 			name = GistListTests;
 			productName = GistListTests;
@@ -361,6 +390,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73FFCD872C0315DE000D494E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73FFCD412C0306FC000D494E /* GistList */;
+			targetProxy = 73FFCD862C0315DE000D494E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		73FFCD522C0306FD000D494E /* Debug */ = {
@@ -557,7 +594,6 @@
 		73FFCD582C0306FD000D494E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GistApp.app/GistApp";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NZC6LC8NWM;
@@ -581,7 +617,6 @@
 		73FFCD592C0306FD000D494E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GistApp.app/GistApp";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NZC6LC8NWM;
