@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "73505C052C02D2B30062FC5F"
+               BlueprintIdentifier = "73FFCD412C0306FC000D494E"
                BuildableName = "GistList.framework"
                BlueprintName = "GistList"
                ReferencedContainer = "container:GistList.xcodeproj">
@@ -34,7 +34,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "73505C0D2C02D2B40062FC5F"
+               BlueprintIdentifier = "73FFCD492C0306FD000D494E"
                BuildableName = "GistListTests.xctest"
                BlueprintName = "GistListTests"
                ReferencedContainer = "container:GistList.xcodeproj">
@@ -62,7 +62,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "73505C052C02D2B30062FC5F"
+            BlueprintIdentifier = "73FFCD412C0306FC000D494E"
             BuildableName = "GistList.framework"
             BlueprintName = "GistList"
             ReferencedContainer = "container:GistList.xcodeproj">

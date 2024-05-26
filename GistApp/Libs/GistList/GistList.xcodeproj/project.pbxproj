@@ -7,250 +7,219 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73505C0F2C02D2B40062FC5F /* GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73505C062C02D2B30062FC5F /* GistList.framework */; };
-		73505C142C02D2B40062FC5F /* GistListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C132C02D2B40062FC5F /* GistListTests.swift */; };
-		73505C152C02D2B40062FC5F /* GistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 73505C092C02D2B30062FC5F /* GistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73505C252C02D30D0062FC5F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C232C02D30D0062FC5F /* NetworkError.swift */; };
-		73505C262C02D30D0062FC5F /* RequestProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C242C02D30D0062FC5F /* RequestProperties.swift */; };
-		73505C272C02D3240062FC5F /* GistFileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C1F2C02D2E50062FC5F /* GistFileModel.swift */; };
-		73505C282C02D3240062FC5F /* GistOwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C212C02D2E50062FC5F /* GistOwnerModel.swift */; };
-		73505C292C02D3240062FC5F /* GistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C202C02D2E50062FC5F /* GistModel.swift */; };
-		73505C3A2C02D3730062FC5F /* GistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C2D2C02D3730062FC5F /* GistCell.swift */; };
-		73505C3B2C02D3730062FC5F /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C2E2C02D3730062FC5F /* TableViewDataSource.swift */; };
-		73505C3C2C02D3730062FC5F /* GistListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C2F2C02D3730062FC5F /* GistListPresenter.swift */; };
-		73505C3D2C02D3730062FC5F /* GistListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C302C02D3730062FC5F /* GistListInteractor.swift */; };
-		73505C3E2C02D3730062FC5F /* GistListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C312C02D3730062FC5F /* GistListService.swift */; };
-		73505C3F2C02D3730062FC5F /* GistListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C322C02D3730062FC5F /* GistListFactory.swift */; };
-		73505C402C02D3730062FC5F /* GistListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C332C02D3730062FC5F /* GistListCoordinator.swift */; };
-		73505C412C02D3730062FC5F /* GistListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C342C02D3730062FC5F /* GistListViewController.swift */; };
-		73505C422C02D3730062FC5F /* GistDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C362C02D3730062FC5F /* GistDetailsFactory.swift */; };
-		73505C432C02D3730062FC5F /* GistDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C372C02D3730062FC5F /* GistDetailsViewController.swift */; };
-		73505C442C02D3730062FC5F /* GistDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C382C02D3730062FC5F /* GistDetailsInteractor.swift */; };
-		73505C452C02D3730062FC5F /* GistDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73505C392C02D3730062FC5F /* GistDetailsPresenter.swift */; };
-		73505C472C02D4460062FC5F /* CoreApiInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73505C462C02D4460062FC5F /* CoreApiInterface.framework */; };
-		73505C482C02D4460062FC5F /* CoreApiInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73505C462C02D4460062FC5F /* CoreApiInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B655E5AB8518F2509B17357E /* Pods_GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DC3EA31C4B036D656F829D /* Pods_GistList.framework */; };
+		4F5455AF0202B35C732A815B /* Pods_GistList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E4CC9E4526CE88F722E070 /* Pods_GistList.framework */; };
+		73FFCD502C0306FD000D494E /* GistListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD4F2C0306FD000D494E /* GistListTests.swift */; };
+		73FFCD512C0306FD000D494E /* GistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 73FFCD452C0306FC000D494E /* GistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73FFCD5B2C030702000D494E /* GistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD5A2C030702000D494E /* GistList.swift */; };
+		73FFCD602C031466000D494E /* GistFileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD5D2C031466000D494E /* GistFileModel.swift */; };
+		73FFCD612C031466000D494E /* GistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD5E2C031466000D494E /* GistModel.swift */; };
+		73FFCD622C031466000D494E /* GistOwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD5F2C031466000D494E /* GistOwnerModel.swift */; };
+		73FFCD762C031476000D494E /* GistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD692C031476000D494E /* GistCell.swift */; };
+		73FFCD772C031476000D494E /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD6A2C031476000D494E /* TableViewDataSource.swift */; };
+		73FFCD782C031476000D494E /* GistListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD6B2C031476000D494E /* GistListPresenter.swift */; };
+		73FFCD792C031476000D494E /* GistListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD6C2C031476000D494E /* GistListInteractor.swift */; };
+		73FFCD7A2C031476000D494E /* GistListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD6D2C031476000D494E /* GistListService.swift */; };
+		73FFCD7B2C031476000D494E /* GistListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD6E2C031476000D494E /* GistListFactory.swift */; };
+		73FFCD7C2C031476000D494E /* GistListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD6F2C031476000D494E /* GistListCoordinator.swift */; };
+		73FFCD7D2C031476000D494E /* GistListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD702C031476000D494E /* GistListViewController.swift */; };
+		73FFCD7E2C031476000D494E /* GistDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD722C031476000D494E /* GistDetailsFactory.swift */; };
+		73FFCD7F2C031476000D494E /* GistDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD732C031476000D494E /* GistDetailsViewController.swift */; };
+		73FFCD802C031476000D494E /* GistDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD742C031476000D494E /* GistDetailsInteractor.swift */; };
+		73FFCD812C031476000D494E /* GistDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD752C031476000D494E /* GistDetailsPresenter.swift */; };
+		73FFCD822C0314B1000D494E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD642C03146A000D494E /* NetworkError.swift */; };
+		73FFCD832C0314B5000D494E /* RequestProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFCD652C03146A000D494E /* RequestProperties.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		73505C102C02D2B40062FC5F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 73505BFD2C02D2B30062FC5F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 73505C052C02D2B30062FC5F;
-			remoteInfo = GistList;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		73505C492C02D4460062FC5F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				73505C482C02D4460062FC5F /* CoreApiInterface.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		07DC3EA31C4B036D656F829D /* Pods_GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73505C062C02D2B30062FC5F /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73505C092C02D2B30062FC5F /* GistList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GistList.h; sourceTree = "<group>"; };
-		73505C0E2C02D2B40062FC5F /* GistListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GistListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		73505C132C02D2B40062FC5F /* GistListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListTests.swift; sourceTree = "<group>"; };
-		73505C1F2C02D2E50062FC5F /* GistFileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFileModel.swift; sourceTree = "<group>"; };
-		73505C202C02D2E50062FC5F /* GistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistModel.swift; sourceTree = "<group>"; };
-		73505C212C02D2E50062FC5F /* GistOwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistOwnerModel.swift; sourceTree = "<group>"; };
-		73505C232C02D30D0062FC5F /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		73505C242C02D30D0062FC5F /* RequestProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProperties.swift; sourceTree = "<group>"; };
-		73505C2D2C02D3730062FC5F /* GistCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistCell.swift; sourceTree = "<group>"; };
-		73505C2E2C02D3730062FC5F /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
-		73505C2F2C02D3730062FC5F /* GistListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListPresenter.swift; sourceTree = "<group>"; };
-		73505C302C02D3730062FC5F /* GistListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListInteractor.swift; sourceTree = "<group>"; };
-		73505C312C02D3730062FC5F /* GistListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListService.swift; sourceTree = "<group>"; };
-		73505C322C02D3730062FC5F /* GistListFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListFactory.swift; sourceTree = "<group>"; };
-		73505C332C02D3730062FC5F /* GistListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListCoordinator.swift; sourceTree = "<group>"; };
-		73505C342C02D3730062FC5F /* GistListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListViewController.swift; sourceTree = "<group>"; };
-		73505C362C02D3730062FC5F /* GistDetailsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsFactory.swift; sourceTree = "<group>"; };
-		73505C372C02D3730062FC5F /* GistDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsViewController.swift; sourceTree = "<group>"; };
-		73505C382C02D3730062FC5F /* GistDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsInteractor.swift; sourceTree = "<group>"; };
-		73505C392C02D3730062FC5F /* GistDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsPresenter.swift; sourceTree = "<group>"; };
-		73505C462C02D4460062FC5F /* CoreApiInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreApiInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73B4002C2C02D88600F26DBA /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF1DB9ACFD9C9854785EC7B0 /* Pods-GistList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistList.debug.xcconfig"; path = "Target Support Files/Pods-GistList/Pods-GistList.debug.xcconfig"; sourceTree = "<group>"; };
-		DE7812288EAECAAA1D3B3FFD /* Pods-GistList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistList.release.xcconfig"; path = "Target Support Files/Pods-GistList/Pods-GistList.release.xcconfig"; sourceTree = "<group>"; };
+		43860BB484588BBE40D6E809 /* Pods-GistList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistList.release.xcconfig"; path = "Target Support Files/Pods-GistList/Pods-GistList.release.xcconfig"; sourceTree = "<group>"; };
+		4C35E0F77E940ED9D95156E6 /* Pods-GistList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistList.debug.xcconfig"; path = "Target Support Files/Pods-GistList/Pods-GistList.debug.xcconfig"; sourceTree = "<group>"; };
+		73FFCD422C0306FC000D494E /* GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73FFCD452C0306FC000D494E /* GistList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GistList.h; sourceTree = "<group>"; };
+		73FFCD4A2C0306FD000D494E /* GistListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GistListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73FFCD4F2C0306FD000D494E /* GistListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListTests.swift; sourceTree = "<group>"; };
+		73FFCD5A2C030702000D494E /* GistList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistList.swift; sourceTree = "<group>"; };
+		73FFCD5D2C031466000D494E /* GistFileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistFileModel.swift; sourceTree = "<group>"; };
+		73FFCD5E2C031466000D494E /* GistModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistModel.swift; sourceTree = "<group>"; };
+		73FFCD5F2C031466000D494E /* GistOwnerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistOwnerModel.swift; sourceTree = "<group>"; };
+		73FFCD642C03146A000D494E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		73FFCD652C03146A000D494E /* RequestProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProperties.swift; sourceTree = "<group>"; };
+		73FFCD692C031476000D494E /* GistCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistCell.swift; sourceTree = "<group>"; };
+		73FFCD6A2C031476000D494E /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		73FFCD6B2C031476000D494E /* GistListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListPresenter.swift; sourceTree = "<group>"; };
+		73FFCD6C2C031476000D494E /* GistListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListInteractor.swift; sourceTree = "<group>"; };
+		73FFCD6D2C031476000D494E /* GistListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListService.swift; sourceTree = "<group>"; };
+		73FFCD6E2C031476000D494E /* GistListFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListFactory.swift; sourceTree = "<group>"; };
+		73FFCD6F2C031476000D494E /* GistListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListCoordinator.swift; sourceTree = "<group>"; };
+		73FFCD702C031476000D494E /* GistListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistListViewController.swift; sourceTree = "<group>"; };
+		73FFCD722C031476000D494E /* GistDetailsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsFactory.swift; sourceTree = "<group>"; };
+		73FFCD732C031476000D494E /* GistDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsViewController.swift; sourceTree = "<group>"; };
+		73FFCD742C031476000D494E /* GistDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsInteractor.swift; sourceTree = "<group>"; };
+		73FFCD752C031476000D494E /* GistDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistDetailsPresenter.swift; sourceTree = "<group>"; };
+		80E4CC9E4526CE88F722E070 /* Pods_GistList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		73505C032C02D2B30062FC5F /* Frameworks */ = {
+		73FFCD3F2C0306FC000D494E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73505C472C02D4460062FC5F /* CoreApiInterface.framework in Frameworks */,
-				B655E5AB8518F2509B17357E /* Pods_GistList.framework in Frameworks */,
+				4F5455AF0202B35C732A815B /* Pods_GistList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		73505C0B2C02D2B40062FC5F /* Frameworks */ = {
+		73FFCD472C0306FD000D494E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73505C0F2C02D2B40062FC5F /* GistList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00AB53453A4E97C2EDA5CEFA /* Frameworks */ = {
+		1848D35A208D088229485C66 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				73B4002C2C02D88600F26DBA /* SnapKit.framework */,
-				73505C462C02D4460062FC5F /* CoreApiInterface.framework */,
-				07DC3EA31C4B036D656F829D /* Pods_GistList.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3EFD8ACDD1DC8D775AFCE4F5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AF1DB9ACFD9C9854785EC7B0 /* Pods-GistList.debug.xcconfig */,
-				DE7812288EAECAAA1D3B3FFD /* Pods-GistList.release.xcconfig */,
+				4C35E0F77E940ED9D95156E6 /* Pods-GistList.debug.xcconfig */,
+				43860BB484588BBE40D6E809 /* Pods-GistList.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
 			sourceTree = "<group>";
 		};
-		73505BFC2C02D2B30062FC5F = {
+		73FFCD382C0306FC000D494E = {
 			isa = PBXGroup;
 			children = (
-				73505C082C02D2B30062FC5F /* GistList */,
-				73505C122C02D2B40062FC5F /* GistListTests */,
-				73505C072C02D2B30062FC5F /* Products */,
-				3EFD8ACDD1DC8D775AFCE4F5 /* Pods */,
-				00AB53453A4E97C2EDA5CEFA /* Frameworks */,
+				73FFCD442C0306FC000D494E /* GistList */,
+				73FFCD4E2C0306FD000D494E /* GistListTests */,
+				73FFCD432C0306FC000D494E /* Products */,
+				1848D35A208D088229485C66 /* Pods */,
+				C87C7BA24408BBF93FED13F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		73505C072C02D2B30062FC5F /* Products */ = {
+		73FFCD432C0306FC000D494E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				73505C062C02D2B30062FC5F /* GistList.framework */,
-				73505C0E2C02D2B40062FC5F /* GistListTests.xctest */,
+				73FFCD422C0306FC000D494E /* GistList.framework */,
+				73FFCD4A2C0306FD000D494E /* GistListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		73505C082C02D2B30062FC5F /* GistList */ = {
+		73FFCD442C0306FC000D494E /* GistList */ = {
 			isa = PBXGroup;
 			children = (
-				73505C092C02D2B30062FC5F /* GistList.h */,
-				73505C222C02D30D0062FC5F /* Commons */,
-				73505C1E2C02D2E50062FC5F /* Models */,
-				73505C2A2C02D3730062FC5F /* Scenes */,
+				73FFCD452C0306FC000D494E /* GistList.h */,
+				73FFCD5A2C030702000D494E /* GistList.swift */,
+				73FFCD632C03146A000D494E /* Commons */,
+				73FFCD5C2C031466000D494E /* Models */,
+				73FFCD662C031476000D494E /* Scenes */,
 			);
 			path = GistList;
 			sourceTree = "<group>";
 		};
-		73505C122C02D2B40062FC5F /* GistListTests */ = {
+		73FFCD4E2C0306FD000D494E /* GistListTests */ = {
 			isa = PBXGroup;
 			children = (
-				73505C132C02D2B40062FC5F /* GistListTests.swift */,
+				73FFCD4F2C0306FD000D494E /* GistListTests.swift */,
 			);
 			path = GistListTests;
 			sourceTree = "<group>";
 		};
-		73505C1E2C02D2E50062FC5F /* Models */ = {
+		73FFCD5C2C031466000D494E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				73505C1F2C02D2E50062FC5F /* GistFileModel.swift */,
-				73505C202C02D2E50062FC5F /* GistModel.swift */,
-				73505C212C02D2E50062FC5F /* GistOwnerModel.swift */,
+				73FFCD5D2C031466000D494E /* GistFileModel.swift */,
+				73FFCD5E2C031466000D494E /* GistModel.swift */,
+				73FFCD5F2C031466000D494E /* GistOwnerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		73505C222C02D30D0062FC5F /* Commons */ = {
+		73FFCD632C03146A000D494E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				73505C232C02D30D0062FC5F /* NetworkError.swift */,
-				73505C242C02D30D0062FC5F /* RequestProperties.swift */,
+				73FFCD642C03146A000D494E /* NetworkError.swift */,
+				73FFCD652C03146A000D494E /* RequestProperties.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
 		};
-		73505C2A2C02D3730062FC5F /* Scenes */ = {
+		73FFCD662C031476000D494E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				73505C2B2C02D3730062FC5F /* GistList */,
-				73505C352C02D3730062FC5F /* GistDetails */,
+				73FFCD672C031476000D494E /* GistList */,
+				73FFCD712C031476000D494E /* GistDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		73505C2B2C02D3730062FC5F /* GistList */ = {
+		73FFCD672C031476000D494E /* GistList */ = {
 			isa = PBXGroup;
 			children = (
-				73505C2C2C02D3730062FC5F /* TableView */,
-				73505C2F2C02D3730062FC5F /* GistListPresenter.swift */,
-				73505C302C02D3730062FC5F /* GistListInteractor.swift */,
-				73505C312C02D3730062FC5F /* GistListService.swift */,
-				73505C322C02D3730062FC5F /* GistListFactory.swift */,
-				73505C332C02D3730062FC5F /* GistListCoordinator.swift */,
-				73505C342C02D3730062FC5F /* GistListViewController.swift */,
+				73FFCD682C031476000D494E /* TableView */,
+				73FFCD6B2C031476000D494E /* GistListPresenter.swift */,
+				73FFCD6C2C031476000D494E /* GistListInteractor.swift */,
+				73FFCD6D2C031476000D494E /* GistListService.swift */,
+				73FFCD6E2C031476000D494E /* GistListFactory.swift */,
+				73FFCD6F2C031476000D494E /* GistListCoordinator.swift */,
+				73FFCD702C031476000D494E /* GistListViewController.swift */,
 			);
 			path = GistList;
 			sourceTree = "<group>";
 		};
-		73505C2C2C02D3730062FC5F /* TableView */ = {
+		73FFCD682C031476000D494E /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				73505C2D2C02D3730062FC5F /* GistCell.swift */,
-				73505C2E2C02D3730062FC5F /* TableViewDataSource.swift */,
+				73FFCD692C031476000D494E /* GistCell.swift */,
+				73FFCD6A2C031476000D494E /* TableViewDataSource.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
 		};
-		73505C352C02D3730062FC5F /* GistDetails */ = {
+		73FFCD712C031476000D494E /* GistDetails */ = {
 			isa = PBXGroup;
 			children = (
-				73505C362C02D3730062FC5F /* GistDetailsFactory.swift */,
-				73505C372C02D3730062FC5F /* GistDetailsViewController.swift */,
-				73505C382C02D3730062FC5F /* GistDetailsInteractor.swift */,
-				73505C392C02D3730062FC5F /* GistDetailsPresenter.swift */,
+				73FFCD722C031476000D494E /* GistDetailsFactory.swift */,
+				73FFCD732C031476000D494E /* GistDetailsViewController.swift */,
+				73FFCD742C031476000D494E /* GistDetailsInteractor.swift */,
+				73FFCD752C031476000D494E /* GistDetailsPresenter.swift */,
 			);
 			path = GistDetails;
+			sourceTree = "<group>";
+		};
+		C87C7BA24408BBF93FED13F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80E4CC9E4526CE88F722E070 /* Pods_GistList.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		73505C012C02D2B30062FC5F /* Headers */ = {
+		73FFCD3D2C0306FC000D494E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73505C152C02D2B40062FC5F /* GistList.h in Headers */,
+				73FFCD512C0306FD000D494E /* GistList.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		73505C052C02D2B30062FC5F /* GistList */ = {
+		73FFCD412C0306FC000D494E /* GistList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73505C182C02D2B40062FC5F /* Build configuration list for PBXNativeTarget "GistList" */;
+			buildConfigurationList = 73FFCD542C0306FD000D494E /* Build configuration list for PBXNativeTarget "GistList" */;
 			buildPhases = (
-				6EA1AB41E894E859BE41A798 /* [CP] Check Pods Manifest.lock */,
-				73505C012C02D2B30062FC5F /* Headers */,
-				73505C022C02D2B30062FC5F /* Sources */,
-				73505C032C02D2B30062FC5F /* Frameworks */,
-				73505C042C02D2B30062FC5F /* Resources */,
-				73505C492C02D4460062FC5F /* Embed Frameworks */,
+				97B78A66F3AD826515038E2D /* [CP] Check Pods Manifest.lock */,
+				73FFCD3D2C0306FC000D494E /* Headers */,
+				73FFCD3E2C0306FC000D494E /* Sources */,
+				73FFCD3F2C0306FC000D494E /* Frameworks */,
+				73FFCD402C0306FC000D494E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -258,46 +227,45 @@
 			);
 			name = GistList;
 			productName = GistList;
-			productReference = 73505C062C02D2B30062FC5F /* GistList.framework */;
+			productReference = 73FFCD422C0306FC000D494E /* GistList.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		73505C0D2C02D2B40062FC5F /* GistListTests */ = {
+		73FFCD492C0306FD000D494E /* GistListTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73505C1B2C02D2B40062FC5F /* Build configuration list for PBXNativeTarget "GistListTests" */;
+			buildConfigurationList = 73FFCD572C0306FD000D494E /* Build configuration list for PBXNativeTarget "GistListTests" */;
 			buildPhases = (
-				73505C0A2C02D2B40062FC5F /* Sources */,
-				73505C0B2C02D2B40062FC5F /* Frameworks */,
-				73505C0C2C02D2B40062FC5F /* Resources */,
+				73FFCD462C0306FD000D494E /* Sources */,
+				73FFCD472C0306FD000D494E /* Frameworks */,
+				73FFCD482C0306FD000D494E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				73505C112C02D2B40062FC5F /* PBXTargetDependency */,
 			);
 			name = GistListTests;
 			productName = GistListTests;
-			productReference = 73505C0E2C02D2B40062FC5F /* GistListTests.xctest */;
+			productReference = 73FFCD4A2C0306FD000D494E /* GistListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		73505BFD2C02D2B30062FC5F /* Project object */ = {
+		73FFCD392C0306FC000D494E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					73505C052C02D2B30062FC5F = {
+					73FFCD412C0306FC000D494E = {
 						CreatedOnToolsVersion = 15.0;
 					};
-					73505C0D2C02D2B40062FC5F = {
+					73FFCD492C0306FD000D494E = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 73505C002C02D2B30062FC5F /* Build configuration list for PBXProject "GistList" */;
+			buildConfigurationList = 73FFCD3C2C0306FC000D494E /* Build configuration list for PBXProject "GistList" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -305,26 +273,26 @@
 				en,
 				Base,
 			);
-			mainGroup = 73505BFC2C02D2B30062FC5F;
-			productRefGroup = 73505C072C02D2B30062FC5F /* Products */;
+			mainGroup = 73FFCD382C0306FC000D494E;
+			productRefGroup = 73FFCD432C0306FC000D494E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				73505C052C02D2B30062FC5F /* GistList */,
-				73505C0D2C02D2B40062FC5F /* GistListTests */,
+				73FFCD412C0306FC000D494E /* GistList */,
+				73FFCD492C0306FD000D494E /* GistListTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		73505C042C02D2B30062FC5F /* Resources */ = {
+		73FFCD402C0306FC000D494E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		73505C0C2C02D2B40062FC5F /* Resources */ = {
+		73FFCD482C0306FD000D494E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,7 +302,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6EA1AB41E894E859BE41A798 /* [CP] Check Pods Manifest.lock */ = {
+		97B78A66F3AD826515038E2D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,50 +327,43 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		73505C022C02D2B30062FC5F /* Sources */ = {
+		73FFCD3E2C0306FC000D494E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73505C272C02D3240062FC5F /* GistFileModel.swift in Sources */,
-				73505C412C02D3730062FC5F /* GistListViewController.swift in Sources */,
-				73505C262C02D30D0062FC5F /* RequestProperties.swift in Sources */,
-				73505C432C02D3730062FC5F /* GistDetailsViewController.swift in Sources */,
-				73505C3A2C02D3730062FC5F /* GistCell.swift in Sources */,
-				73505C402C02D3730062FC5F /* GistListCoordinator.swift in Sources */,
-				73505C282C02D3240062FC5F /* GistOwnerModel.swift in Sources */,
-				73505C422C02D3730062FC5F /* GistDetailsFactory.swift in Sources */,
-				73505C3F2C02D3730062FC5F /* GistListFactory.swift in Sources */,
-				73505C252C02D30D0062FC5F /* NetworkError.swift in Sources */,
-				73505C3D2C02D3730062FC5F /* GistListInteractor.swift in Sources */,
-				73505C3E2C02D3730062FC5F /* GistListService.swift in Sources */,
-				73505C3C2C02D3730062FC5F /* GistListPresenter.swift in Sources */,
-				73505C452C02D3730062FC5F /* GistDetailsPresenter.swift in Sources */,
-				73505C3B2C02D3730062FC5F /* TableViewDataSource.swift in Sources */,
-				73505C442C02D3730062FC5F /* GistDetailsInteractor.swift in Sources */,
-				73505C292C02D3240062FC5F /* GistModel.swift in Sources */,
+				73FFCD822C0314B1000D494E /* NetworkError.swift in Sources */,
+				73FFCD7A2C031476000D494E /* GistListService.swift in Sources */,
+				73FFCD772C031476000D494E /* TableViewDataSource.swift in Sources */,
+				73FFCD7C2C031476000D494E /* GistListCoordinator.swift in Sources */,
+				73FFCD792C031476000D494E /* GistListInteractor.swift in Sources */,
+				73FFCD762C031476000D494E /* GistCell.swift in Sources */,
+				73FFCD802C031476000D494E /* GistDetailsInteractor.swift in Sources */,
+				73FFCD7E2C031476000D494E /* GistDetailsFactory.swift in Sources */,
+				73FFCD7F2C031476000D494E /* GistDetailsViewController.swift in Sources */,
+				73FFCD7D2C031476000D494E /* GistListViewController.swift in Sources */,
+				73FFCD612C031466000D494E /* GistModel.swift in Sources */,
+				73FFCD812C031476000D494E /* GistDetailsPresenter.swift in Sources */,
+				73FFCD832C0314B5000D494E /* RequestProperties.swift in Sources */,
+				73FFCD602C031466000D494E /* GistFileModel.swift in Sources */,
+				73FFCD622C031466000D494E /* GistOwnerModel.swift in Sources */,
+				73FFCD7B2C031476000D494E /* GistListFactory.swift in Sources */,
+				73FFCD5B2C030702000D494E /* GistList.swift in Sources */,
+				73FFCD782C031476000D494E /* GistListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		73505C0A2C02D2B40062FC5F /* Sources */ = {
+		73FFCD462C0306FD000D494E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73505C142C02D2B40062FC5F /* GistListTests.swift in Sources */,
+				73FFCD502C0306FD000D494E /* GistListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		73505C112C02D2B40062FC5F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 73505C052C02D2B30062FC5F /* GistList */;
-			targetProxy = 73505C102C02D2B40062FC5F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		73505C162C02D2B40062FC5F /* Debug */ = {
+		73FFCD522C0306FD000D494E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -455,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -468,7 +429,7 @@
 			};
 			name = Debug;
 		};
-		73505C172C02D2B40062FC5F /* Release */ = {
+		73FFCD532C0306FD000D494E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -515,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -527,9 +488,9 @@
 			};
 			name = Release;
 		};
-		73505C192C02D2B40062FC5F /* Debug */ = {
+		73FFCD552C0306FD000D494E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF1DB9ACFD9C9854785EC7B0 /* Pods-GistList.debug.xcconfig */;
+			baseConfigurationReference = 4C35E0F77E940ED9D95156E6 /* Pods-GistList.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -560,9 +521,9 @@
 			};
 			name = Debug;
 		};
-		73505C1A2C02D2B40062FC5F /* Release */ = {
+		73FFCD562C0306FD000D494E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE7812288EAECAAA1D3B3FFD /* Pods-GistList.release.xcconfig */;
+			baseConfigurationReference = 43860BB484588BBE40D6E809 /* Pods-GistList.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -593,12 +554,17 @@
 			};
 			name = Release;
 		};
-		73505C1C2C02D2B40062FC5F /* Debug */ = {
+		73FFCD582C0306FD000D494E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GistApp.app/GistApp";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NZC6LC8NWM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
@@ -606,58 +572,68 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				SYMROOT = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GistApp.app/GistApp";
 			};
 			name = Debug;
 		};
-		73505C1D2C02D2B40062FC5F /* Release */ = {
+		73FFCD592C0306FD000D494E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GistApp.app/GistApp";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NZC6LC8NWM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_MAP_FILE_PATH = "$(TARGET_TEMP_DIR)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joaoflores.GistListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				SYMROOT = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GistApp.app/GistApp";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		73505C002C02D2B30062FC5F /* Build configuration list for PBXProject "GistList" */ = {
+		73FFCD3C2C0306FC000D494E /* Build configuration list for PBXProject "GistList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				73505C162C02D2B40062FC5F /* Debug */,
-				73505C172C02D2B40062FC5F /* Release */,
+				73FFCD522C0306FD000D494E /* Debug */,
+				73FFCD532C0306FD000D494E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73505C182C02D2B40062FC5F /* Build configuration list for PBXNativeTarget "GistList" */ = {
+		73FFCD542C0306FD000D494E /* Build configuration list for PBXNativeTarget "GistList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				73505C192C02D2B40062FC5F /* Debug */,
-				73505C1A2C02D2B40062FC5F /* Release */,
+				73FFCD552C0306FD000D494E /* Debug */,
+				73FFCD562C0306FD000D494E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73505C1B2C02D2B40062FC5F /* Build configuration list for PBXNativeTarget "GistListTests" */ = {
+		73FFCD572C0306FD000D494E /* Build configuration list for PBXNativeTarget "GistListTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				73505C1C2C02D2B40062FC5F /* Debug */,
-				73505C1D2C02D2B40062FC5F /* Release */,
+				73FFCD582C0306FD000D494E /* Debug */,
+				73FFCD592C0306FD000D494E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 73505BFD2C02D2B30062FC5F /* Project object */;
+	rootObject = 73FFCD392C0306FC000D494E /* Project object */;
 }
